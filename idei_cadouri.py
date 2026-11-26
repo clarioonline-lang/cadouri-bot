@@ -225,7 +225,9 @@ def main():
     istoric = incarca_istoric()
     candidati = [
         p for p in produse
-        if p["link"] and p["pret"] and PRET_MIN <= p["pret"] <= PRET_MAX
+        # rand stricat in feed (ghilimele gresite) -> link-ul nu incepe cu http, il sarim
+        if p["link"].startswith("http") and " " not in p["link"]
+        and p["pret"] and PRET_MIN <= p["pret"] <= PRET_MAX
         and p["discount"] >= DISCOUNT_MIN
         and (p["cod"] or p["nume"]) not in istoric
         and not any(norm(w) in norm(p["nume"] + " " + p["categorie"]) for w in EXCLUDE)
