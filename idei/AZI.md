@@ -1,20 +1,20 @@
 # Idei de cadouri - 2026-11-26
-9 produse alese din 1085 (pret 30-400 lei).
+10 produse alese din 2523 (pret 30-400 lei).
 
 ---
 
-## 1. Casti wireless Bluetooth S42 cu afisaj LED si microfon, compatibile  cu iOS si Android
-**96 lei** · **-63%** · Mindblower.ro · cadouri secret santa
+## 1. Set 4 lampi solare decorative cu 320 LED-uri, rezistente la apa, IP65
+**98 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcasti-wireless-in-ear-cu-afisaj-led-s42.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-4-lampi-solare-decorative-cu-320-led-uri-rezistente-la-apa-ip65.html
 
 **Caption propus:**
 
 ```
-Cadou sub radar, efect garantat ✨
+Nu știi ce să-i iei? 🎁
 
-Casti wireless Bluetooth S42 cu afisaj LED si microfon, compatibile  cu iOS si Android
-Acum la 96 lei (redus cu 63% de la 256 lei).
+Set 4 lampi solare decorative cu 320 LED-uri, rezistente la apa, IP65
+Acum la 98 lei (redus cu 50% de la 194 lei).
 
 Link în bio 🔗
 
@@ -23,18 +23,18 @@ Link în bio 🔗
 
 ---
 
-## 2. Pila electrica pentru talpi set 10 accesorii
-**80 lei** · **-60%** · Mindblower.ro · Top 100 Cadouri
+## 2. Set de antrenament golf
+**127 lei** · **-59%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpila-electrica-pentru-talpi-set-10-accesorii.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-de-antrenament-golf.html
 
 **Caption propus:**
 
 ```
-Cadou sub radar, efect garantat ✨
+Nu știi ce să-i iei? 🎁
 
-Pila electrica pentru talpi set 10 accesorii
-Acum la 80 lei (redus cu 60% de la 199 lei).
+Set de antrenament golf
+Acum la 127 lei (redus cu 59% de la 308 lei).
 
 Link în bio 🔗
 
@@ -43,18 +43,38 @@ Link în bio 🔗
 
 ---
 
-## 3. Suport conuri parfumate Moon face
-**53 lei** · **-59%** · Mindblower.ro · Top 100 Cadouri
+## 3. Aparat de masaj electric multifunctional pentru scalp si corp
+**63 lei** · **-65%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fsuport-conuri-parfumate-moon-face.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fdispozitiv-electric-pentru-masaj-capilar.html
+
+**Caption propus:**
+
+```
+Cadou sub radar, efect garantat ✨
+
+Aparat de masaj electric multifunctional pentru scalp si corp
+Acum la 63 lei (redus cu 65% de la 179 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 4. Set 3 sertare glisante soft close, extragere totala
+**115 lei** · **-62%** · Mindblower.ro · bucatarie
+
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-3-sertare-glisante-soft-close-extragere-totala.html
 
 **Caption propus:**
 
 ```
 Idee de cadou care chiar se folosește 👇
 
-Suport conuri parfumate Moon face
-Acum la 53 lei (redus cu 59% de la 129 lei).
+Set 3 sertare glisante soft close, extragere totala
+Acum la 115 lei (redus cu 62% de la 299 lei).
 
 Link în bio 🔗
 
@@ -63,18 +83,64 @@ Link în bio 🔗
 
 ---
 
-## 4. Set 9 Puzzle-uri din Lemn Kongming
-**123 lei** · **-53%** · Mindblower.ro · Top 100 Cadouri
+## 5. Cana The Best
+**42 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-9-puzzle-uri-din-lemn-kongming.html
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/cana-big-boss-copie-2644-2280.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=36db967b4&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Idee de cadou care chiar se folosește 👇
+
+Cana The Best
+Acum la 42 lei (redus cu 30% de la 60 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 6. Mini Umidificator Difuzor de Arome Black
+**77 lei** · **-30%** · 3gifts.ro  · Cadouri utile in casa
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/mini-umidificator-difuzor-de-arome-black-innovagoods_93649-6-1627-3229.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=a9f3bb370&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Nu știi ce să-i iei? 🎁
+
+Mini Umidificator Difuzor de Arome Black
+Acum la 77 lei (redus cu 30% de la 110 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 7. Cana TOXIC
+**40 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/eng_pl_toxic-waste-mug-2798_5-2645-4998.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=e204c8efd&aff_code=3dece1a07&campaign_unique=d7287555a
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Set 9 Puzzle-uri din Lemn Kongming
-Acum la 123 lei (redus cu 53% de la 259 lei).
+Cana TOXIC
+Acum la 40 lei (redus cu 30% de la 57 lei).
 
 Link în bio 🔗
 
@@ -83,18 +149,20 @@ Link în bio 🔗
 
 ---
 
-## 5. Set Personalizat de Berii de Pale Ale de Casă
-**227 lei** · Giftspot.ro · Kituri de Bere Artizanală
+## 8. Cana FUEL - pentru diminetile in care ai nevoie de combustibil
+**48 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
 
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fset-personalizat-de-berii-de-pale-ale-de-casa%2F
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/cana-fuel-pentru-diminetile-in-care-ai-nevoie-de-combustibil-213583.png)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=gBDwyKxzdjiD&aff_code=3dece1a07&campaign_unique=d7287555a
 
 **Caption propus:**
 
 ```
 Cadou sub radar, efect garantat ✨
 
-Set Personalizat de Berii de Pale Ale de Casă
-Costă 227 lei.
+Cana FUEL - pentru diminetile in care ai nevoie de combustibil
+Acum la 48 lei (redus cu 30% de la 69 lei).
 
 Link în bio 🔗
 
@@ -103,38 +171,18 @@ Link în bio 🔗
 
 ---
 
-## 6. Ceas de Nisip Digital cu LED – Cronometru Modern Decorativ
-**99 lei** · Giftspot.ro · Accesorii Birou
+## 9. Harta Lumii Răzuibilă - Geografie
+**179 lei** · **-17%** · Giftspot.ro · Cadouri de Razuit
 
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fceas-de-nisip-digital-cu-led%2F
-
-**Caption propus:**
-
-```
-Cadou sub radar, efect garantat ✨
-
-Ceas de Nisip Digital cu LED – Cronometru Modern Decorativ
-Costă 99 lei.
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 7. Lumini LED pentru Roți de Bicicletă
-**79 lei** · Giftspot.ro · Alte Cadouri Mici
-
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Flumini-led-pentru-roti-de-bicicleta%2F
+🔗 Link afiliat: deoarece include o mulțime de detalii de pe harta lumii. În colțul din stânga jos este "
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Lumini LED pentru Roți de Bicicletă
-Costă 79 lei.
+Harta Lumii Răzuibilă - Geografie
+Acum la 179 lei (redus cu 17% de la 217 lei).
 
 Link în bio 🔗
 
@@ -143,38 +191,18 @@ Link în bio 🔗
 
 ---
 
-## 8. Breloc Aparat Foto cu Sunet și Lumină LED
-**49 lei** · Giftspot.ro · Alte Cadouri Mici
+## 10. Brățară Magnetică
+**51 lei** · **-17%** · Giftspot.ro · Alte Cadouri Mici
 
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fbreloc-aparat-foto-cu-sunet-i-lumin-led%2F
+🔗 Link afiliat: bolțurile și șuruburile?"" Este fabricată dintr-un material durabil și rezistent și are o bandă magnetică în interior. Pur și "
 
 **Caption propus:**
 
 ```
 Cadou sub radar, efect garantat ✨
 
-Breloc Aparat Foto cu Sunet și Lumină LED
-Costă 49 lei.
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 9. Perna memory EVRIK premium
-**160 lei** · **-7%** · Evrik.ro · Perne
-
-🔗 Link afiliat: https://profitshare.ro/lps/npH/hU0/?redirect=https%3A%2F%2Fwww.evrik.ro%2Fprodus%2Fperna-memory-evrik-premium%2F%3Futm_source%3DProfitshare%26utm_medium%3Daffiliate%26utm_campaign%3Dprofitshare_feed%26utm_term%3D474
-
-**Caption propus:**
-
-```
-Pentru cine are deja tot 😄
-
-Perna memory EVRIK premium
-Costă 160 lei.
+Brățară Magnetică
+Acum la 51 lei (redus cu 17% de la 62 lei).
 
 Link în bio 🔗
 
