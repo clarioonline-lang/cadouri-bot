@@ -118,15 +118,15 @@ def citeste_csv(text):
 
 def incarca_produse(urls):
     produse = []
-    for url in urls:
+    for nr, url in enumerate(urls, 1):
         try:
             text = descarca(url)
         except Exception as e:  # un feed picat nu opreste restul
-            print(f"EROARE la feed {url[:40]}...: {e}")
+            print(f"EROARE la feedul nr. {nr}: {type(e).__name__}")
             continue
         randuri = citeste_csv(text)
         if not randuri:
-            print(f"Feed gol: {url[:50]}...")
+            print(f"Feed gol: feedul nr. {nr}")
             continue
         col = gaseste_coloane(randuri[0].keys())
         print("Header feed:", list(randuri[0].keys()))
