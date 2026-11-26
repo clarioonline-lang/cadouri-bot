@@ -45,7 +45,7 @@ COLOANE = {
     "descriere": ["descriere produs", "product description", "description"],
     "link": ["link afiliere produs", "affiliate link", "product affiliate link",
              "marketer link", "aff_code", "affiliate_link", "aff link"],
-    "imagine": ["imagine produs", "product image", "image urls", "image_urls", "image"],
+    "imagine": ["imagine produs", "product picture", "product image", "image urls", "image_urls", "image"],
     "pret": ["pret cu tva", "price with vat", "price vat", "sale price", "price"],
     "pret_redus": ["pret cu discount, cu tva", "price with discount, with vat",
                    "price discounted with vat", "discounted price with vat",
