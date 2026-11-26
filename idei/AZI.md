@@ -1,100 +1,20 @@
 # Idei de cadouri - 2026-11-26
-10 produse alese din 1085 (pret 30-400 lei).
+9 produse alese din 1085 (pret 30-400 lei).
 
 ---
 
-## 1. Pachet Cadou Barbati, Pentru Soferul cu Personalitate
-**106 lei** · **-68%** · Mindblower.ro · cadouri secret santa
+## 1. Casti wireless Bluetooth S42 cu afisaj LED si microfon, compatibile  cu iOS si Android
+**96 lei** · **-63%** · Mindblower.ro · cadouri secret santa
 
-🔗 Link afiliat: //profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpachet-cadou-barbati-pentru-soferul-cu-personalitate.html
-
-**Caption propus:**
-
-```
-Pentru cine are deja tot 😄
-
-Pachet Cadou Barbati, Pentru Soferul cu Personalitate
-Acum la 106 lei (redus cu 68% de la 327 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 2. Cana cafea de Craciun din sticla transparenta
-**47 lei** · **-54%** · Mindblower.ro · Top 100 Cadouri
-
-🔗 Link afiliat: //profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-de-cafea-christmas-time.html
-
-**Caption propus:**
-
-```
-Idee de cadou care chiar se folosește 👇
-
-Cana cafea de Craciun din sticla transparenta
-Acum la 47 lei (redus cu 54% de la 102 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 3. Cana termosensibila Renul vesel
-**48 lei** · **-56%** · Mindblower.ro · Top 100 Cadouri
-
-🔗 Link afiliat: //profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-termosensibila-renul-vesel.html
-
-**Caption propus:**
-
-```
-Nu știi ce să-i iei? 🎁
-
-Cana termosensibila Renul vesel
-Acum la 48 lei (redus cu 56% de la 109 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 4. Lampa LED XL Rotunda - 32 cm, RGB Effect
-**224 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
-
-🔗 Link afiliat: //profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Flampa-led-xl-rotunda-32-cm-rgb-effect.html
-
-**Caption propus:**
-
-```
-Pentru cine are deja tot 😄
-
-Lampa LED XL Rotunda - 32 cm, RGB Effect
-Acum la 224 lei (redus cu 50% de la 447 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 5. Lampă de Citit LED
-**49 lei** · Giftspot.ro · Alte Cadouri Mici
-
-🔗 Link afiliat: //profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Flampa-de-citit-led%2F
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcasti-wireless-in-ear-cu-afisaj-led-s42.html
 
 **Caption propus:**
 
 ```
 Cadou sub radar, efect garantat ✨
 
-Lampă de Citit LED
-Costă 49 lei.
+Casti wireless Bluetooth S42 cu afisaj LED si microfon, compatibile  cu iOS si Android
+Acum la 96 lei (redus cu 63% de la 256 lei).
 
 Link în bio 🔗
 
@@ -103,18 +23,18 @@ Link în bio 🔗
 
 ---
 
-## 6. Mini Lampa LED tip Luna
-**100 lei** · Giftspot.ro · Accesorii Casa
+## 2. Pila electrica pentru talpi set 10 accesorii
+**80 lei** · **-60%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: //profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fmini-lampa-led-tip-luna%2F
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpila-electrica-pentru-talpi-set-10-accesorii.html
 
 **Caption propus:**
 
 ```
-Nu știi ce să-i iei? 🎁
+Cadou sub radar, efect garantat ✨
 
-Mini Lampa LED tip Luna
-Costă 100 lei.
+Pila electrica pentru talpi set 10 accesorii
+Acum la 80 lei (redus cu 60% de la 199 lei).
 
 Link în bio 🔗
 
@@ -123,18 +43,18 @@ Link în bio 🔗
 
 ---
 
-## 7. Mini Lampă in Forma de Câine
-**49 lei** · Giftspot.ro · Alte Cadouri Mici
+## 3. Suport conuri parfumate Moon face
+**53 lei** · **-59%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: //profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fmini-lampa-in-forma-de-caine%2F
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fsuport-conuri-parfumate-moon-face.html
 
 **Caption propus:**
 
 ```
 Idee de cadou care chiar se folosește 👇
 
-Mini Lampă in Forma de Câine
-Costă 49 lei.
+Suport conuri parfumate Moon face
+Acum la 53 lei (redus cu 59% de la 129 lei).
 
 Link în bio 🔗
 
@@ -143,17 +63,97 @@ Link în bio 🔗
 
 ---
 
-## 8. Breloc cu Lumină LED - Bec
+## 4. Set 9 Puzzle-uri din Lemn Kongming
+**123 lei** · **-53%** · Mindblower.ro · Top 100 Cadouri
+
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-9-puzzle-uri-din-lemn-kongming.html
+
+**Caption propus:**
+
+```
+Pentru cine are deja tot 😄
+
+Set 9 Puzzle-uri din Lemn Kongming
+Acum la 123 lei (redus cu 53% de la 259 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 5. Set Personalizat de Berii de Pale Ale de Casă
+**227 lei** · Giftspot.ro · Kituri de Bere Artizanală
+
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fset-personalizat-de-berii-de-pale-ale-de-casa%2F
+
+**Caption propus:**
+
+```
+Cadou sub radar, efect garantat ✨
+
+Set Personalizat de Berii de Pale Ale de Casă
+Costă 227 lei.
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 6. Ceas de Nisip Digital cu LED – Cronometru Modern Decorativ
+**99 lei** · Giftspot.ro · Accesorii Birou
+
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fceas-de-nisip-digital-cu-led%2F
+
+**Caption propus:**
+
+```
+Cadou sub radar, efect garantat ✨
+
+Ceas de Nisip Digital cu LED – Cronometru Modern Decorativ
+Costă 99 lei.
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 7. Lumini LED pentru Roți de Bicicletă
+**79 lei** · Giftspot.ro · Alte Cadouri Mici
+
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Flumini-led-pentru-roti-de-bicicleta%2F
+
+**Caption propus:**
+
+```
+Pentru cine are deja tot 😄
+
+Lumini LED pentru Roți de Bicicletă
+Costă 79 lei.
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 8. Breloc Aparat Foto cu Sunet și Lumină LED
 **49 lei** · Giftspot.ro · Alte Cadouri Mici
 
-🔗 Link afiliat: //profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fbreloc-cu-lumin-led-bec%2F
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fbreloc-aparat-foto-cu-sunet-i-lumin-led%2F
 
 **Caption propus:**
 
 ```
-Pentru cine are deja tot 😄
+Cadou sub radar, efect garantat ✨
 
-Breloc cu Lumină LED - Bec
+Breloc Aparat Foto cu Sunet și Lumină LED
 Costă 49 lei.
 
 Link în bio 🔗
@@ -163,38 +163,18 @@ Link în bio 🔗
 
 ---
 
-## 9. Perna anatomica Evrik
-**200 lei** · **-14%** · Evrik.ro · Perne
+## 9. Perna memory EVRIK premium
+**160 lei** · **-7%** · Evrik.ro · Perne
 
-🔗 Link afiliat: //profitshare.ro/lps/npH/hU0/?redirect=https%3A%2F%2Fwww.evrik.ro%2Fprodus%2Fperna-anatomica-evrik%2F%3Futm_source%3DProfitshare%26utm_medium%3Daffiliate%26utm_campaign%3Dprofitshare_feed%26utm_term%3D465
-
-**Caption propus:**
-
-```
-Pentru cine are deja tot 😄
-
-Perna anatomica Evrik
-Acum la 200 lei (redus cu 14% de la 232 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 10. Perna EVRIK Aloe memory
-**200 lei** · **-14%** · Evrik.ro · Perne
-
-🔗 Link afiliat: //profitshare.ro/lps/npH/hU0/?redirect=https%3A%2F%2Fwww.evrik.ro%2Fprodus%2Fperna-evrik-aloe-memory%2F%3Futm_source%3DProfitshare%26utm_medium%3Daffiliate%26utm_campaign%3Dprofitshare_feed%26utm_term%3D475
+🔗 Link afiliat: https://profitshare.ro/lps/npH/hU0/?redirect=https%3A%2F%2Fwww.evrik.ro%2Fprodus%2Fperna-memory-evrik-premium%2F%3Futm_source%3DProfitshare%26utm_medium%3Daffiliate%26utm_campaign%3Dprofitshare_feed%26utm_term%3D474
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Perna EVRIK Aloe memory
-Acum la 200 lei (redus cu 14% de la 232 lei).
+Perna memory EVRIK premium
+Costă 160 lei.
 
 Link în bio 🔗
 
