@@ -78,6 +78,7 @@ def main():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name='profitshareid' content='22c6ef787053676c47d6e124210c3dd5' />
 <title>Cadouri pe Buget – ideile de azi</title>
 <meta name="description" content="Idei de cadouri sub 400 lei, cu reduceri, alese în fiecare zi.">
 <meta property="og:title" content="Cadouri pe Buget – ideile de azi">
