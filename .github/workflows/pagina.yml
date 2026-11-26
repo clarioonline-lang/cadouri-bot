@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,4 +42,13 @@ jobs:
           path: site
 
       - id: deploy
+        continue-on-error: true   # GitHub da uneori o eroare temporara la publicare
+        uses: actions/deploy-pages@v4
+
+      - name: Asteapta un minut inainte de reincercare
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 60
+
+      - id: deploy2
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
