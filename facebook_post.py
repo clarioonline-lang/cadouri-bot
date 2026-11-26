@@ -11,6 +11,7 @@ Scrie idei/FACEBOOK.md cu:
 Ruleaza dupa idei_cadouri.py. Nu are nevoie de setari sau secrete.
 """
 
+import json
 import random
 import re
 import unicodedata
@@ -20,6 +21,7 @@ from pathlib import Path
 FOLDER = Path("idei")
 INTRARE = FOLDER / "AZI.md"
 IESIRE = FOLDER / "FACEBOOK.md"
+IESIRE_JSON = FOLDER / "facebook_post.json"  # citit de post_facebook.py
 CUVANT_CHEIE = "CADOU"          # ce scriu oamenii in comentarii
 ORA_POSTARE = "12:00 sau 19:30"  # cand sa programezi postarea
 
@@ -159,6 +161,7 @@ def main():
         for i, p in enumerate(top, 1):
             out.append(f"\n{i}. {p['nume']}" + (f"\n\n![poza {i}]({p['poza']})\n" if p["poza"]
                        else " – *fără poză în feed, fă o captură de pe site*\n"))
+        de_postat = {"text": text, "poze": [p["poza"] for p in top if p["poza"]]}
         out += [f"\n## Textul postării (fără link)\n\n```\n{text}\n```\n",
                 f"\n## Răspuns pe Messenger\n\n```\n{mesaj_messenger(top)}\n```\n"]
     else:
@@ -168,6 +171,7 @@ def main():
         out.append(f"\n![poza]({p['poza']})\n\nSalvează poza: apasă lung pe ea → Salvează.\n"
                    if p["poza"] else
                    "\n*Produsul nu are poză în feed: deschide link-ul și fă o captură de ecran.*\n")
+        de_postat = {"text": postare_produs(p, intro), "poze": [p["poza"]] if p["poza"] else []}
         out += [f"\n## Textul postării (fără link)\n\n```\n{postare_produs(p, intro)}\n```\n",
                 f"\n## Răspuns pe Messenger (celor care scriu {CUVANT_CHEIE})\n\n"
                 f"```\n{mesaj_messenger([p])}\n```\n"]
@@ -184,6 +188,8 @@ def main():
     out.append("\n---\n*Nu pune link-ul în postare sau în comentarii: Facebook limitează "
                "paginile la câteva link-uri pe lună. Link-ul îl trimiți doar pe Messenger.*\n")
 
+    de_postat["data"] = azi.isoformat()
+    IESIRE_JSON.write_text(json.dumps(de_postat, ensure_ascii=False, indent=2), encoding="utf-8")
     IESIRE.write_text("".join(out), encoding="utf-8")
     print(f"Scris: {IESIRE}")
 
