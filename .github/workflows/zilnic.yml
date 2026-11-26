@@ -1,0 +1,32 @@
+name: Idei de cadouri zilnic
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # in fiecare zi, ~07:17-08:17 ora Romaniei
+  workflow_dispatch:        # buton "Run workflow" pentru rulare manuala
+
+permissions:
+  contents: write
+
+jobs:
+  idei:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Genereaza ideile
+        env:
+          FEED_URL: ${{ secrets.FEED_URL }}
+        run: python idei_cadouri.py
+
+      - name: Salveaza rezultatul in repo
+        run: |
+          git config user.name "cadouri-bot"
+          git config user.email "cadouri-bot@users.noreply.github.com"
+          git add -A idei istoric.txt 2>/dev/null || true
+          git commit -m "Idei cadouri $(date +%F)" || echo "Nimic nou"
+          git push
