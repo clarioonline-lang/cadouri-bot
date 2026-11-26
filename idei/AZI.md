@@ -3,78 +3,18 @@
 
 ---
 
-## 1. Set 4 lampi solare decorative cu 320 LED-uri, rezistente la apa, IP65
-**98 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
+## 1. Carti de Joc Placate cu Aur 24K si cutie eleganta din lemn
+**78 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-4-lampi-solare-decorative-cu-320-led-uri-rezistente-la-apa-ip65.html
-
-**Caption propus:**
-
-```
-Nu știi ce să-i iei? 🎁
-
-Set 4 lampi solare decorative cu 320 LED-uri, rezistente la apa, IP65
-Acum la 98 lei (redus cu 50% de la 194 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 2. Set de antrenament golf
-**127 lei** · **-59%** · Mindblower.ro · Top 100 Cadouri
-
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-de-antrenament-golf.html
-
-**Caption propus:**
-
-```
-Nu știi ce să-i iei? 🎁
-
-Set de antrenament golf
-Acum la 127 lei (redus cu 59% de la 308 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 3. Aparat de masaj electric multifunctional pentru scalp si corp
-**63 lei** · **-65%** · Mindblower.ro · Top 100 Cadouri
-
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fdispozitiv-electric-pentru-masaj-capilar.html
-
-**Caption propus:**
-
-```
-Cadou sub radar, efect garantat ✨
-
-Aparat de masaj electric multifunctional pentru scalp si corp
-Acum la 63 lei (redus cu 65% de la 179 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 4. Set 3 sertare glisante soft close, extragere totala
-**115 lei** · **-62%** · Mindblower.ro · bucatarie
-
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-3-sertare-glisante-soft-close-extragere-totala.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcarti-de-joc-aurite.html
 
 **Caption propus:**
 
 ```
 Idee de cadou care chiar se folosește 👇
 
-Set 3 sertare glisante soft close, extragere totala
-Acum la 115 lei (redus cu 62% de la 299 lei).
+Carti de Joc Placate cu Aur 24K si cutie eleganta din lemn
+Acum la 78 lei (redus cu 50% de la 156 lei).
 
 Link în bio 🔗
 
@@ -83,20 +23,18 @@ Link în bio 🔗
 
 ---
 
-## 5. Cana The Best
-**42 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+## 2. Aparat de peeling ultrasonic pentru fata
+**80 lei** · **-60%** · Mindblower.ro · Top 100 Cadouri
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/cana-big-boss-copie-2644-2280.jpg)
-
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=36db967b4&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Faparat-de-peeling-ultrasonic-pentru-fata.html
 
 **Caption propus:**
 
 ```
 Idee de cadou care chiar se folosește 👇
 
-Cana The Best
-Acum la 42 lei (redus cu 30% de la 60 lei).
+Aparat de peeling ultrasonic pentru fata
+Acum la 80 lei (redus cu 60% de la 199 lei).
 
 Link în bio 🔗
 
@@ -105,42 +43,18 @@ Link în bio 🔗
 
 ---
 
-## 6. Mini Umidificator Difuzor de Arome Black
-**77 lei** · **-30%** · 3gifts.ro  · Cadouri utile in casa
+## 3. Pachet Cadou Barbati Cool, Black Edition
+**227 lei** · **-59%** · Mindblower.ro · gadget
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/mini-umidificator-difuzor-de-arome-black-innovagoods_93649-6-1627-3229.jpg)
-
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=a9f3bb370&aff_code=3dece1a07&campaign_unique=d7287555a
-
-**Caption propus:**
-
-```
-Nu știi ce să-i iei? 🎁
-
-Mini Umidificator Difuzor de Arome Black
-Acum la 77 lei (redus cu 30% de la 110 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 7. Cana TOXIC
-**40 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
-
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/eng_pl_toxic-waste-mug-2798_5-2645-4998.jpg)
-
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=e204c8efd&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpachet-cadou-barbati-cool-black-edition.html
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Cana TOXIC
-Acum la 40 lei (redus cu 30% de la 57 lei).
+Pachet Cadou Barbati Cool, Black Edition
+Acum la 227 lei (redus cu 59% de la 548 lei).
 
 Link în bio 🔗
 
@@ -149,19 +63,105 @@ Link în bio 🔗
 
 ---
 
-## 8. Cana FUEL - pentru diminetile in care ai nevoie de combustibil
-**48 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+## 4. Cutie de bijuterii, Grey, My love, Bratara 7 Chakre CADOU
+**41 lei** · **-57%** · Mindblower.ro · Top 100 Cadouri
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/cana-fuel-pentru-diminetile-in-care-ai-nevoie-de-combustibil-213583.png)
-
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=gBDwyKxzdjiD&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcutie-de-bijuterii-grey-20x15x4-8cm-my-love.html
 
 **Caption propus:**
 
 ```
 Cadou sub radar, efect garantat ✨
 
-Cana FUEL - pentru diminetile in care ai nevoie de combustibil
+Cutie de bijuterii, Grey, My love, Bratara 7 Chakre CADOU
+Acum la 41 lei (redus cu 57% de la 95 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 5. Set manichiura Perfect - Personalizat cu nume
+**55 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/set-manichiura-perfect-personalizat-cu-nume-962693.png)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=499a8a1ae&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Idee de cadou care chiar se folosește 👇
+
+Set manichiura Perfect - Personalizat cu nume
+Acum la 55 lei (redus cu 30% de la 79 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 6. Cana termosensibila Don t panic
+**32 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/cana-termosensibila-don-t-panic-735503.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=97b075a47&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Pentru cine are deja tot 😄
+
+Cana termosensibila Don t panic
+Acum la 32 lei (redus cu 30% de la 45 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 7. Lampa pentru unghii LED UV Pocket
+**51 lei** · **-30%** · 3gifts.ro  · Pentru cine
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/uscator-pentru-unghii-monkey-copie-1827-6508.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=662ad0a2d&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Nu știi ce să-i iei? 🎁
+
+Lampa pentru unghii LED UV Pocket
+Acum la 51 lei (redus cu 30% de la 73 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 8. Geanta cosmetice Laser Plus
+**48 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+
+![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/geanta-cosmetice-laser-plus-701708.jpg)
+
+🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=IT9HQzczPuuU&aff_code=3dece1a07&campaign_unique=d7287555a
+
+**Caption propus:**
+
+```
+Cadou sub radar, efect garantat ✨
+
+Geanta cosmetice Laser Plus
 Acum la 48 lei (redus cu 30% de la 69 lei).
 
 Link în bio 🔗
@@ -171,18 +171,18 @@ Link în bio 🔗
 
 ---
 
-## 9. Harta Lumii Răzuibilă - Geografie
-**179 lei** · **-17%** · Giftspot.ro · Cadouri de Razuit
+## 9. Mini Lampa Harry Potter
+**64 lei** · Giftspot.ro · Accesorii Casa
 
-🔗 Link afiliat: deoarece include o mulțime de detalii de pe harta lumii. În colțul din stânga jos este "
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fmini-lampa-harry-potter%2F
 
 **Caption propus:**
 
 ```
-Pentru cine are deja tot 😄
+Idee de cadou care chiar se folosește 👇
 
-Harta Lumii Răzuibilă - Geografie
-Acum la 179 lei (redus cu 17% de la 217 lei).
+Mini Lampa Harry Potter
+Costă 64 lei.
 
 Link în bio 🔗
 
@@ -191,18 +191,18 @@ Link în bio 🔗
 
 ---
 
-## 10. Brățară Magnetică
-**51 lei** · **-17%** · Giftspot.ro · Alte Cadouri Mici
+## 10. Lampă Mini din Sare Himalayană
+**74 lei** · Giftspot.ro · Accesorii Birou
 
-🔗 Link afiliat: bolțurile și șuruburile?"" Este fabricată dintr-un material durabil și rezistent și are o bandă magnetică în interior. Pur și "
+🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Flampa-mini-din-sare-himalayana%2F
 
 **Caption propus:**
 
 ```
-Cadou sub radar, efect garantat ✨
+Nu știi ce să-i iei? 🎁
 
-Brățară Magnetică
-Acum la 51 lei (redus cu 17% de la 62 lei).
+Lampă Mini din Sare Himalayană
+Costă 74 lei.
 
 Link în bio 🔗
 
