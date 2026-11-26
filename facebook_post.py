@@ -115,6 +115,21 @@ def postare_produs(p, intro):
             f"#cadouripebuget #ideicadouri #cadouri #afiliere")
 
 
+HASHTAG_IG = "#cadouripebuget #ideicadouri #cadouri #cadou #cadouperfect #ideidecadouri #romania #afiliere"
+
+
+def text_instagram(produse, intro):
+    """Pe Instagram linkurile din text nu merg: trimitem la linkul din bio (vitrina)."""
+    if len(produse) == 1:
+        p = produse[0]
+        corp = f"🎁 {p['nume']}\n{oferta(p)}"
+    else:
+        corp = "\n".join(f"{i}. {p['nume']} – {p['pret']} lei" for i, p in enumerate(produse, 1))
+    return (f"{intro}\n\n{corp}\n\n"
+            f"🔗 Link în bio → „Ideile de azi”: găsești acolo produsul, cu link direct la magazin.\n"
+            f"Salvează postarea ca s-o ai la îndemână 📌\n\n{HASHTAG_IG}")
+
+
 def mesaj_messenger(lista):
     linii = ["Salut! 🎁 Uite link-ul:" if len(lista) == 1 else "Salut! 🎁 Uite link-urile:"]
     for p in lista:
@@ -194,6 +209,8 @@ def main():
     alese = top if (zi == 6 and not sezon) else [p]
     de_postat["produse"] = [{k: q[k] for k in ("nume", "pret", "discount", "magazin", "poza")}
                             for q in alese]
+    intro_ig = "🏆 Top 5 idei de cadouri sub 100 lei din săptămâna asta:" if len(alese) > 1 else intro
+    de_postat["text_instagram"] = text_instagram(alese, intro_ig)
     IESIRE_JSON.write_text(json.dumps(de_postat, ensure_ascii=False, indent=2), encoding="utf-8")
     IESIRE.write_text("".join(out), encoding="utf-8")
     print(f"Scris: {IESIRE}")
