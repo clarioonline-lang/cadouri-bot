@@ -23,6 +23,9 @@ jobs:
           FEED_URL: ${{ secrets.FEED_URL }}
         run: python idei_cadouri.py
 
+      - name: Genereaza postarea de Facebook
+        run: python facebook_post.py
+
       - name: Salveaza rezultatul in repo
         run: |
           git config user.name "cadouri-bot"
