@@ -26,6 +26,12 @@ jobs:
       - name: Genereaza postarea de Facebook
         run: python facebook_post.py
 
+      - name: Deseneaza imaginea postarii (stilul paginii)
+        continue-on-error: true   # daca nu merge, se posteaza poza originala a produsului
+        run: |
+          pip install --quiet pillow
+          python imagine_postare.py
+
       - name: Salveaza rezultatul in repo
         run: |
           git config user.name "cadouri-bot"

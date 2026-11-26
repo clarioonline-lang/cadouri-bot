@@ -18,6 +18,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Deseneaza imaginea postarii (stilul paginii)
+        continue-on-error: true
+        run: |
+          pip install --quiet pillow
+          python imagine_postare.py
+
       - name: Posteaza postarea zilei
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
