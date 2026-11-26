@@ -23,7 +23,7 @@ INTRARE = FOLDER / "AZI.md"
 IESIRE = FOLDER / "FACEBOOK.md"
 IESIRE_JSON = FOLDER / "facebook_post.json"  # citit de post_facebook.py
 CUVANT_CHEIE = "CADOU"          # ce scriu oamenii in comentarii
-ORA_POSTARE = "12:00 sau 19:30"  # cand sa programezi postarea
+ORA_POSTARE = "automat, ~06:00"  # botul posteaza singur
 
 # Tema pe zile (0 = luni ... 6 = duminica)
 TEME = {
@@ -148,7 +148,7 @@ def main():
     ordonate = alege(produse, cuvinte, pret_max)
 
     out = [f"# Postare Facebook – {azi.isoformat()}\n",
-           f"**Tema:** {tema} · **Programează la:** {ORA_POSTARE}\n"]
+           f"**Tema:** {tema} · **Postare:** {ORA_POSTARE}\n"]
 
     if zi == 6 and not sezon:
         top = ordonate[:5]
