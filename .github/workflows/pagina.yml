@@ -1,0 +1,45 @@
+name: Pagina vitrina
+
+# Publica pagina cu ideile zilei pe GitHub Pages:
+# https://clarioonline-lang.github.io/cadouri-bot/
+on:
+  workflow_run:
+    workflows: ["Idei de cadouri zilnic"]
+    types: [completed]
+  workflow_dispatch:        # buton "Run workflow" pentru refacere manuala
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publica:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Genereaza pagina
+        run: python pagina.py
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
