@@ -12,6 +12,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 from datetime import date
 from pathlib import Path
 
@@ -20,12 +21,27 @@ POSTARE = Path("idei/facebook_post.json")
 JURNAL = Path("idei/postat.txt")
 
 
-def cerere(cale, token, date_form=None):
-    """GET daca date_form e None, altfel POST. Intoarce raspunsul JSON."""
+def multipart(campuri, fisier):
+    """Corpul unei cereri cu fisier atasat (imaginea desenata de bot)."""
+    granita = uuid.uuid4().hex
+    parti = []
+    for k, v in campuri.items():
+        parti.append(f'--{granita}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
+    parti.append(f'--{granita}\r\nContent-Disposition: form-data; name="source"; filename="postare.jpg"\r\n'
+                 f'Content-Type: image/jpeg\r\n\r\n'.encode() + Path(fisier).read_bytes() + b"\r\n")
+    parti.append(f"--{granita}--\r\n".encode())
+    return b"".join(parti), f"multipart/form-data; boundary={granita}"
+
+
+def cerere(cale, token, date_form=None, fisier=None):
+    """GET daca date_form e None, altfel POST (cu fisier, daca e dat). Intoarce raspunsul JSON."""
     url = f"{API}/{cale}"
     if date_form is None:
         url += "?" + urllib.parse.urlencode({"access_token": token})
         req = urllib.request.Request(url)
+    elif fisier:
+        body, tip = multipart({**date_form, "access_token": token}, fisier)
+        req = urllib.request.Request(url, data=body, method="POST", headers={"Content-Type": tip})
     else:
         body = urllib.parse.urlencode({**date_form, "access_token": token}).encode()
         req = urllib.request.Request(url, data=body, method="POST")
@@ -59,13 +75,25 @@ def main():
     page_id = pagina["id"]
     print(f"Postez pe: {pagina.get('name')} ({page_id})")
 
-    text, poze = post["text"], post.get("poze") or []
+    text = post["text"]
+    imagini = [f for f in (post.get("imagini") or []) if Path(f).exists()]
+    if imagini:   # imaginile desenate de imagine_postare.py, in stilul paginii
+        poze = [("fisier", f) for f in imagini]
+    else:         # rezerva: pozele originale ale produselor
+        poze = [("url", u) for u in (post.get("poze") or [])]
+
+    def urca(poza, campuri):
+        fel, val = poza
+        if fel == "fisier":
+            return cerere(f"{page_id}/photos", token, campuri, fisier=val)
+        return cerere(f"{page_id}/photos", token, {**campuri, "url": val})
+
     if len(poze) == 1:
-        rez = cerere(f"{page_id}/photos", token, {"url": poze[0], "caption": text})
+        rez = urca(poze[0], {"caption": text})
     elif len(poze) > 1:
         ids = []
-        for url in poze:   # urcam pozele nepublicate, apoi le punem intr-o singura postare
-            ids.append(cerere(f"{page_id}/photos", token, {"url": url, "published": "false"})["id"])
+        for poza in poze:   # urcam pozele nepublicate, apoi le punem intr-o singura postare
+            ids.append(urca(poza, {"published": "false"})["id"])
         form = {"message": text}
         for i, fid in enumerate(ids):
             form[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})

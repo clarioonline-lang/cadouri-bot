@@ -189,6 +189,11 @@ def main():
                "paginile la câteva link-uri pe lună. Link-ul îl trimiți doar pe Messenger.*\n")
 
     de_postat["data"] = azi.isoformat()
+    de_postat["tema"] = tema
+    # datele produselor, pentru imaginile desenate de imagine_postare.py
+    alese = top if (zi == 6 and not sezon) else [p]
+    de_postat["produse"] = [{k: q[k] for k in ("nume", "pret", "discount", "magazin", "poza")}
+                            for q in alese]
     IESIRE_JSON.write_text(json.dumps(de_postat, ensure_ascii=False, indent=2), encoding="utf-8")
     IESIRE.write_text("".join(out), encoding="utf-8")
     print(f"Scris: {IESIRE}")
