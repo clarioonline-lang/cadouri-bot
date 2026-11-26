@@ -80,6 +80,11 @@ def numar(val):
         return None
 
 
+def repara_link(url):
+    url = (url or "").strip()
+    return "https:" + url if url.startswith("//") else url
+
+
 def descarca(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 cadouri-bot"})
     with urllib.request.urlopen(req, timeout=120) as r:
@@ -127,7 +132,7 @@ def incarca_produse(urls):
                 "categorie": r.get(col.get("categorie", ""), "") if "categorie" in col else "",
                 "nume": (r.get(col["nume"]) or "").strip(),
                 "descriere": r.get(col.get("descriere", ""), "") if "descriere" in col else "",
-                "link": (r.get(col["link"]) or "").strip(),
+                "link": repara_link(r.get(col["link"])),
                 "imagine": r.get(col.get("imagine", ""), "") if "imagine" in col else "",
                 "pret_vechi": pret,
                 "pret": pret_final,
