@@ -9,7 +9,7 @@ on:
   workflow_dispatch:        # buton "Run workflow" pentru refacere manuala
 
 permissions:
-  contents: read
+  contents: write   # pentru jurnalul postarilor pe Instagram
   pages: write
   id-token: write
 
@@ -35,6 +35,14 @@ jobs:
       - name: Genereaza pagina
         run: python pagina.py
 
+      - name: Pune imaginile postarii pe vitrina (Instagram le ia de acolo)
+        continue-on-error: true
+        run: |
+          pip install --quiet pillow
+          python imagine_postare.py
+          mkdir -p site/imagini
+          cp imagini/*.jpg site/imagini/ 2>/dev/null || echo "Nicio imagine azi"
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v4
@@ -52,3 +60,22 @@ jobs:
       - id: deploy2
         if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
+
+      - name: Posteaza pe Instagram
+        if: steps.deploy.outcome == 'success' || steps.deploy2.outcome == 'success'
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          sleep 20   # cateva secunde pana apar imaginile pe vitrina
+          python post_instagram.py
+
+      - name: Noteaza ca am postat pe Instagram
+        if: always()
+        run: |
+          git config user.name "cadouri-bot"
+          git config user.email "cadouri-bot@users.noreply.github.com"
+          git checkout -- idei/facebook_post.json 2>/dev/null || true
+          git add idei/postat_ig.txt 2>/dev/null || true
+          git commit -m "Postat pe Instagram $(date +%F)" || echo "Nimic nou"
+          git pull --rebase --quiet || true
+          git push || echo "Nu am putut salva jurnalul"
