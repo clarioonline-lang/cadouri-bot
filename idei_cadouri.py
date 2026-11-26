@@ -37,16 +37,20 @@ def norm(text: str) -> str:
 
 # Numele coloanelor posibile (Profitshare foloseste nume in romana, uneori in engleza)
 COLOANE = {
-    "magazin": ["nume advertiser", "advertiser name", "advertiser"],
+    # Profitshare (romana) primele, apoi 2Performant (engleza)
+    "magazin": ["nume advertiser", "advertiser name", "advertiser",
+                "merchant program", "campaign_name", "campaign name", "program"],
     "categorie": ["categorie", "category"],
-    "nume": ["nume produs", "product name", "name", "title"],
+    "nume": ["nume produs", "product name", "product title", "title", "name"],
     "descriere": ["descriere produs", "product description", "description"],
-    "link": ["link afiliere produs", "affiliate link", "product affiliate link"],
-    "imagine": ["imagine produs", "product image", "image"],
-    "pret": ["pret cu tva", "price with vat", "price vat", "price"],
+    "link": ["link afiliere produs", "affiliate link", "product affiliate link",
+             "marketer link", "aff_code", "affiliate_link", "aff link"],
+    "imagine": ["imagine produs", "product image", "image urls", "image_urls", "image"],
+    "pret": ["pret cu tva", "price with vat", "price vat", "sale price", "price"],
     "pret_redus": ["pret cu discount, cu tva", "price with discount, with vat",
-                   "price discounted with vat", "discounted price with vat"],
-    "cod": ["cod produs", "product code", "product id", "sku"],
+                   "price discounted with vat", "discounted price with vat",
+                   "old price", "old_price"],
+    "cod": ["cod produs", "product code", "product id", "product_id", "sku"],
     "stoc": ["disponibilitate", "availability"],
 }
 
@@ -85,6 +89,12 @@ def repara_link(url):
     return "https:" + url if url.startswith("//") else url
 
 
+def prima_imagine(val):
+    # 2Performant poate pune mai multe poze intr-o celula
+    parti = re.split(r"[,|\s]+", (val or "").strip())
+    return repara_link(next((p for p in parti if p.startswith(("http", "//"))), ""))
+
+
 def descarca(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 cadouri-bot"})
     with urllib.request.urlopen(req, timeout=120) as r:
@@ -109,31 +119,39 @@ def citeste_csv(text):
 def incarca_produse(urls):
     produse = []
     for url in urls:
-        text = descarca(url)
+        try:
+            text = descarca(url)
+        except Exception as e:  # un feed picat nu opreste restul
+            print(f"EROARE la feed {url[:40]}...: {e}")
+            continue
         randuri = citeste_csv(text)
         if not randuri:
             print(f"Feed gol: {url[:50]}...")
             continue
         col = gaseste_coloane(randuri[0].keys())
+        print("Header feed:", list(randuri[0].keys()))
         print("Coloane gasite:", col)
         lipsa = [k for k in ("nume", "link", "pret") if k not in col]
         if lipsa:
             print("ATENTIE: lipsesc coloanele", lipsa, "| header:", list(randuri[0].keys()))
             continue
         for r in randuri:
-            pret = numar(r.get(col["pret"]))
-            redus = numar(r.get(col.get("pret_redus", ""), None)) if "pret_redus" in col else None
-            if redus and pret and redus < pret:
-                pret_final, discount = redus, round((1 - redus / pret) * 100)
-            else:
-                pret_final, discount = pret, 0
+            # o coloana e pretul, cealalta pretul redus (Profitshare) sau vechi (2Performant):
+            # pretul final = cel mai mic, pretul vechi = cel mai mare
+            preturi = [x for x in (numar(r.get(col["pret"])),
+                                   numar(r.get(col["pret_redus"])) if "pret_redus" in col else None)
+                       if x]
+            if not preturi:
+                continue
+            pret, pret_final = max(preturi), min(preturi)
+            discount = round((1 - pret_final / pret) * 100) if pret_final < pret else 0
             produse.append({
                 "magazin": r.get(col.get("magazin", ""), "") if "magazin" in col else "",
                 "categorie": r.get(col.get("categorie", ""), "") if "categorie" in col else "",
                 "nume": (r.get(col["nume"]) or "").strip(),
                 "descriere": r.get(col.get("descriere", ""), "") if "descriere" in col else "",
                 "link": repara_link(r.get(col["link"])),
-                "imagine": r.get(col.get("imagine", ""), "") if "imagine" in col else "",
+                "imagine": prima_imagine(r.get(col["imagine"])) if "imagine" in col else "",
                 "pret_vechi": pret,
                 "pret": pret_final,
                 "discount": discount,
