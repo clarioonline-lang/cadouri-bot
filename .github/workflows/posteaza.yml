@@ -1,9 +1,9 @@
-name: Posteaza pe Facebook
+name: Posteaza pe Facebook (manual)
 
+# Postarea zilnica se face automat in "Idei de cadouri zilnic" (~06:00).
+# Workflow-ul asta e doar pentru postare manuala (buton "Run workflow").
 on:
-  schedule:
-    - cron: "0 10 * * *"   # 12:00 ora Romaniei iarna (13:00 vara)
-  workflow_dispatch:        # buton "Run workflow" pentru postare manuala
+  workflow_dispatch:
 
 permissions:
   contents: write

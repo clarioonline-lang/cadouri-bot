@@ -2,7 +2,7 @@ name: Idei de cadouri zilnic
 
 on:
   schedule:
-    - cron: "17 5 * * *"   # in fiecare zi, ~07:17-08:17 ora Romaniei
+    - cron: "55 3 * * *"   # 05:55 ora Romaniei iarna (06:55 vara): idei + postare Facebook
   workflow_dispatch:        # buton "Run workflow" pentru rulare manuala
 
 permissions:
@@ -32,4 +32,16 @@ jobs:
           git config user.email "cadouri-bot@users.noreply.github.com"
           git add -A idei istoric.txt 2>/dev/null || true
           git commit -m "Idei cadouri $(date +%F)" || echo "Nimic nou"
+          git push
+
+      - name: Posteaza pe Facebook
+        continue-on-error: true   # daca Facebook da eroare, ideile raman salvate
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python post_facebook.py
+
+      - name: Noteaza ca am postat
+        run: |
+          git add idei/postat.txt 2>/dev/null || true
+          git commit -m "Postat pe Facebook $(date +%F)" || echo "Nimic nou"
           git push
