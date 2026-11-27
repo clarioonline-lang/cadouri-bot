@@ -2,7 +2,7 @@
 Cadouri Bot - descarca feed-ul Profitshare, alege produsele bune de cadou
 si scrie un fisier cu idei de postari pentru pagina de Instagram.
 
-Ruleaza zilnic prin GitHub Actions. Link-ul feed-ului vine din secretul FEED_URL.
+Ruleaza zilnic prin GitHub Actions. Link-urile feed-urilor vin din secretele FEED_URL si FEED_URL_2.
 Poti pune mai multe feed-uri separate prin virgula sau linie noua.
 """
 
@@ -165,7 +165,11 @@ BUN_DE_CADOU = ["cadou", "gift", "set", "kit", "lampa", "lampă", "puzzle", "joc
                 "personalizat", "decor", "lumina", "led", "gadget", "breloc", "ceas", "parfum",
                 "cutie", "box", "proiector", "difuzor", "aroma", "plus", "plush", "lego", "mini"]
 EXCLUDE = ["piesa schimb", "piesă", "cablu", "adaptor", "filtru", "garantie", "garanție",
-           "rezerva", "rezervă", "baterie de schimb", "surub", "șurub"]
+           "rezerva", "rezervă", "baterie de schimb", "surub", "șurub",
+           # Startdecor are si mobila/covoare: nu sunt cadouri
+           "covor", "resigilat", "mobilier", "dulap", "canapea", "scaun", "fotoliu", "saltea",
+           "perdea", "draperie", "tapet", "comoda", "noptiera", "corp de iluminat", "plafoniera",
+           "exterior", "friteuz", "aspirator", "periuta de dinti", "tocator"]
 
 
 def scor(p):
@@ -215,7 +219,9 @@ def caption(p):
 
 
 def main():
-    urls = [u.strip() for u in re.split(r"[,\n]", os.environ.get("FEED_URL", "")) if u.strip()]
+    # FEED_URL (feed-urile initiale) + FEED_URL_2 (feed-uri adaugate ulterior, ex. Perfectbijoux)
+    surse = os.environ.get("FEED_URL", "") + "," + os.environ.get("FEED_URL_2", "")
+    urls = [u.strip() for u in re.split(r"[,\n]", surse) if u.strip()]
     if not urls:
         sys.exit("Lipseste secretul FEED_URL.")
 
