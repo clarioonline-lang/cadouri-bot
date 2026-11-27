@@ -3,13 +3,13 @@ Pagina-vitrina Cadouri pe Buget: o pagina web cu ideile zilei.
 
 Citeste idei/AZI.md (cele 10 produse) si idei/facebook_post.json (ce s-a postat azi pe
 Facebook) si scrie site/index.html. Workflow-ul pagina.yml o publica pe GitHub Pages:
-https://clarioonline-lang.github.io/cadouri-bot/
+https://cadouripebuget.online
 
-Stilul copiaza postarile de pe pagina de Facebook: fundal aproape negru, lumini
-visinii si verzi, rame aurii subtiri, titluri serif aurii.
+Stil „boutique de lux” (ales pe 27 nov. 2026): fundal crem, visiniu si auriu ca accente,
+titluri Playfair Display, text Inter. Culorile sunt cele ale paginii de Facebook, pe fundal deschis.
 
-Produsul postat azi pe Facebook apare primul, mare, ca cine vine de pe Messenger
-sa-l gaseasca imediat.
+Produsul postat azi pe Facebook apare sus, in arcada, ca cine vine de pe Messenger
+sa-l gaseasca imediat. Duminica (album) apare acolo cea mai mare reducere.
 
 ATENTIE: eticheta <meta name='profitshareid'> valideaza site-ul in Profitshare - nu o sterge.
 """
@@ -34,29 +34,48 @@ def e(text):
     return html.escape(str(text or ""), quote=True)
 
 
-def card(p, mare=False):
-    vechi = ""
+ZILE = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"]
+INSTAGRAM = "https://www.instagram.com/cadouripebuget/"
+
+
+def pret_vechi(p):
     if p["discount"] >= 10:
-        pret_vechi = round(p["pret"] / (1 - p["discount"] / 100))
-        vechi = f'<span class="vechi">{pret_vechi} lei</span>'
-    insigna = f'<span class="insigna">-{p["discount"]}%</span>' if p["discount"] >= 10 else ""
-    poza = (f'<img src="{e(p["poza"])}" alt="{e(p["nume"])}" loading="{"eager" if mare else "lazy"}">'
-            if p["poza"] else '<span class="fara-poza">🎁</span>')
-    eticheta = '<p class="eticheta">✦ Ideea zilei de pe Facebook ✦</p>' if mare else ""
+        return round(p["pret"] / (1 - p["discount"] / 100))
+    return None
+
+
+def card(p):
+    vechi = pret_vechi(p)
+    insigna = f'<span class="insigna">−{p["discount"]}%</span>' if vechi else ""
+    vechi_html = f'<span class="vechi">{vechi} lei</span>' if vechi else ""
+    poza = (f'<img src="{e(p["poza"])}" alt="{e(p["nume"])}" loading="lazy">'
+            if p["poza"] else '<span class="fara-poza">Cadou</span>')
     return f"""
-    <article class="card{' mare' if mare else ''}">
-      <a class="rama" href="{e(p['link'])}" target="_blank" rel="sponsored noopener">
-        <span class="panou">{poza}</span>{insigna}
-      </a>
-      <div class="info">
-        {eticheta}
-        <h2>{e(p['nume'])}</h2>
-        <div class="linie"><span>✦</span></div>
-        <p class="pret">{p['pret']} lei {vechi}</p>
-        <p class="magazin">{e(p['magazin'])}</p>
-        <a class="buton" href="{e(p['link'])}" target="_blank" rel="sponsored noopener">Vezi produsul</a>
-      </div>
-    </article>"""
+      <a class="card" href="{e(p['link'])}" target="_blank" rel="sponsored noopener">
+        <span class="poza">{poza}{insigna}</span>
+        <span class="info">
+          <span class="magazin">{e(p['magazin'])}</span>
+          <span class="nume">{e(p['nume'])}</span>
+          <span class="rand"><span class="pret">{p['pret']} lei</span>{vechi_html}<span class="vezi">Vezi →</span></span>
+        </span>
+      </a>"""
+
+
+def vedeta(p, de_pe_fb):
+    vechi = pret_vechi(p)
+    vechi_html = f'<span class="vechi">{vechi} lei</span>' if vechi else ""
+    insigna = f'<span class="insigna mare">−{p["discount"]}%</span>' if vechi else ""
+    poza = (f'<img src="{e(p["poza"])}" alt="{e(p["nume"])}" loading="eager">'
+            if p["poza"] else '<span class="fara-poza">Cadou</span>')
+    eticheta = "Ideea zilei de pe Facebook" if de_pe_fb else "Recomandarea zilei"
+    return f"""
+      <a class="arcada" href="{e(p['link'])}" target="_blank" rel="sponsored noopener">
+        <span class="arcada-poza">{poza}</span>
+        <span class="eticheta">{eticheta}</span>
+        <span class="arcada-nume">{e(p['nume'])}</span>
+        <span class="rand"><span class="pret mare">{p['pret']} lei</span>{vechi_html}{insigna}</span>
+        <span class="buton plin lat">Vezi la {e(p['magazin'])}</span>
+      </a>"""
 
 
 def main():
@@ -68,19 +87,18 @@ def main():
         print("Nu am gasit produse in AZI.md.")
         return
 
-    # produsul postat azi pe Facebook, primul
+    # produsul postat azi pe Facebook sus, in arcada; altfel (duminica) cea mai mare reducere
     text_fb = ""
     if POSTARE.exists():
         text_fb = json.loads(POSTARE.read_text(encoding="utf-8")).get("text", "")
     vedete = [p for p in produse if p["nume"] and p["nume"] in text_fb]
-    if len(vedete) == 1:
-        produse = vedete + [p for p in produse if p is not vedete[0]]
-        carduri = card(vedete[0], mare=True) + "".join(card(p) for p in produse[1:])
-    else:   # duminica (album cu mai multe) sau fara postare: lista simpla
-        carduri = "".join(card(p) for p in produse)
+    de_pe_fb = len(vedete) == 1
+    sus = vedete[0] if de_pe_fb else max(produse, key=lambda p: p["discount"])
+    restul = [p for p in produse if p is not sus]
 
     azi = date.today()
-    data = f"{azi.day} {LUNI[azi.month - 1]} {azi.year}"
+    data = f"{ZILE[azi.weekday()]}, {azi.day} {LUNI[azi.month - 1]}"
+    carduri = "".join(card(p) for p in restul)
 
     pagina = f"""<!DOCTYPE html>
 <html lang="ro">
@@ -89,168 +107,199 @@ def main():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name='profitshareid' content='22c6ef787053676c47d6e124210c3dd5' />
 <meta name='profitshareid' content='92b8226f14e19abefdc952a064be6a1f' />
-<title>Cadouri pe Buget – ideile de azi</title>
-<meta name="description" content="Idei de cadouri sub 400 lei, cu reduceri, alese în fiecare zi.">
+<title>Cadouri pe Buget – cadoul potrivit, la prețul potrivit</title>
+<meta name="description" content="În fiecare dimineață, 10 cadouri reduse între 30 și 400 de lei, din magazine românești.">
 <meta property="og:title" content="Cadouri pe Buget – ideile de azi">
-<meta property="og:description" content="Idei de cadouri cu reduceri, alese în fiecare zi.">
-<meta name="theme-color" content="#0b0806">
+<meta property="og:description" content="10 cadouri reduse, alese în fiecare dimineață.">
+<meta name="theme-color" content="#f7f1e8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {{
-    --negru:#0b0806; --card:#140e0b; --visiniu:#611c15; --visiniu-inchis:#3a0f0c;
-    --smarald:#183521; --auriu:#dba666; --auriu-deschis:#f0c896; --auriu-inchis:#a8763a;
-    --crem:#f3e6d4; --gri:#b9a894;
+    --crem:#f7f1e8; --hartie:#fffdf9; --nisip:#efe4d3; --linie:#e4d6c1; --linie2:#d9c3a0;
+    --visiniu:#611c15; --visiniu-inchis:#3f110c; --auriu:#8a6a2f; --auriu-cald:#dba666;
+    --text:#2a1a14; --text2:#5a4538; --gri:#8c7a6c;
     --serif:"Playfair Display", Georgia, "Times New Roman", serif;
     --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }}
   * {{ box-sizing:border-box; }}
-  html {{ background:var(--negru); }}
-  body {{
-    margin:0; min-height:100vh; font-family:var(--sans); color:var(--crem); line-height:1.45;
-    background:
-      radial-gradient(60vmax 45vmax at 0% 0%, rgba(97,28,21,.55), transparent 70%),
-      radial-gradient(55vmax 45vmax at 100% 100%, rgba(24,53,33,.6), transparent 70%),
-      radial-gradient(3px 3px at 12% 22%, rgba(240,200,150,.55), transparent),
-      radial-gradient(2px 2px at 82% 14%, rgba(240,200,150,.45), transparent),
-      radial-gradient(4px 4px at 70% 38%, rgba(219,166,102,.25), transparent),
-      radial-gradient(2px 2px at 30% 68%, rgba(240,200,150,.35), transparent),
-      radial-gradient(3px 3px at 90% 76%, rgba(219,166,102,.3), transparent),
-      var(--negru);
-    background-attachment:fixed;
-  }}
+  html {{ scroll-behavior:smooth; }}
+  body {{ margin:0; background:var(--crem); color:var(--text); font-family:var(--sans); line-height:1.5; }}
+  a {{ color:var(--visiniu); text-decoration:none; }}
+  .zona {{ max-width:1180px; margin:0 auto; padding-left:32px; padding-right:32px; }}
+  .supra {{ margin:0 0 16px; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:var(--auriu); font-weight:600; }}
 
-  header {{ text-align:center; padding:44px 20px 18px; }}
-  .fundita {{ font-size:1.9rem; filter:drop-shadow(0 0 12px rgba(219,166,102,.45)); }}
-  header h1 {{
-    font-family:var(--serif); font-weight:600; margin:6px 0 0; font-size:clamp(2rem, 7vw, 3rem);
-    background:linear-gradient(180deg, var(--auriu-deschis), var(--auriu) 60%, var(--auriu-inchis));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }}
-  header .sub {{ margin:6px 0 0; font-family:var(--serif); font-style:italic; color:var(--auriu-deschis); font-size:1.05rem; }}
-  header .data {{ margin:12px auto 0; display:inline-block; padding:6px 16px; border:1px solid rgba(219,166,102,.45);
-                 border-radius:999px; color:var(--gri); font-size:.85rem; }}
+  header {{ border-bottom:1px solid var(--linie); }}
+  header .zona {{ padding-top:20px; padding-bottom:20px; display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between; }}
+  .logo {{ font-family:var(--serif); font-size:26px; font-weight:700; color:var(--text); }}
+  .logo i {{ font-weight:400; color:var(--visiniu); }}
+  nav {{ display:flex; flex-wrap:wrap; gap:8px 26px; font-size:14px; font-weight:500; letter-spacing:.3px; }}
+  nav a:hover {{ color:var(--visiniu-inchis); text-decoration:underline; text-underline-offset:4px; }}
 
-  .linie {{ display:flex; align-items:center; gap:10px; color:var(--auriu); font-size:.7rem; }}
-  .linie::before, .linie::after {{ content:""; flex:1; height:1px;
-                                   background:linear-gradient(90deg, transparent, rgba(219,166,102,.7), transparent); }}
+  .erou {{ padding-top:72px; padding-bottom:72px; display:flex; flex-wrap:wrap; gap:56px; align-items:center; }}
+  .erou-text {{ flex:1 1 440px; min-width:0; }}
+  h1 {{ margin:0 0 22px; font-family:var(--serif); font-size:clamp(40px, 6vw, 60px); line-height:1.08; font-weight:600; }}
+  h1 i {{ font-weight:400; color:var(--visiniu); }}
+  .erou-text p.intro {{ margin:0 0 34px; font-size:18px; line-height:1.6; color:var(--text2); max-width:480px; }}
+  .butoane {{ display:flex; flex-wrap:wrap; gap:14px; }}
+  .buton {{ display:inline-block; padding:15px 28px; border-radius:999px; font-weight:600; font-size:15px; border:1px solid var(--visiniu); color:var(--visiniu); text-align:center; transition:background .2s, color .2s; }}
+  .buton:hover {{ background:var(--visiniu); color:var(--crem); }}
+  .buton.plin {{ background:var(--visiniu); color:var(--crem); }}
+  .buton.plin:hover {{ background:var(--visiniu-inchis); }}
+  .buton.lat {{ display:block; margin-top:22px; }}
 
-  main {{ max-width:1040px; margin:0 auto; padding:18px 16px 36px;
-         display:grid; gap:20px; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); }}
+  .erou-vedeta {{ flex:1 1 320px; min-width:0; display:flex; justify-content:center; }}
+  .arcada {{ display:block; width:100%; max-width:390px; background:var(--hartie); border:1px solid var(--linie);
+            border-radius:200px 200px 18px 18px; padding:26px 26px 28px; color:var(--text);
+            box-shadow:0 30px 60px -30px rgba(97,28,21,.35); transition:transform .25s; }}
+  .arcada:hover {{ transform:translateY(-4px); }}
+  .arcada-poza {{ display:block; border-radius:170px 170px 10px 10px; overflow:hidden; border:1px solid #ead9b8; background:#fff; }}
+  .arcada-poza img {{ width:100%; height:300px; object-fit:contain; display:block; }}
+  .eticheta {{ display:block; margin:22px 0 6px; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:var(--auriu); font-weight:600; }}
+  .arcada-nume {{ display:block; margin:0 0 14px; font-family:var(--serif); font-size:24px; line-height:1.25; font-weight:600; }}
 
-  .card {{
-    position:relative; display:flex; flex-direction:column; border-radius:18px; overflow:hidden;
-    background:linear-gradient(180deg, rgba(20,14,11,.92), rgba(14,10,8,.96));
-    border:1px solid rgba(219,166,102,.35);
-    box-shadow:0 10px 30px rgba(0,0,0,.45), inset 0 0 0 4px rgba(11,8,6,.9), inset 0 0 0 5px rgba(219,166,102,.18);
-  }}
-  .rama {{ position:relative; display:block; padding:14px 14px 0; text-decoration:none; }}
-  .panou {{
-    display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; overflow:hidden;
-    background:#fff; border-radius:14px; border:1px solid rgba(219,166,102,.6);
-    box-shadow:0 0 0 4px rgba(97,28,21,.35), 0 0 22px rgba(219,166,102,.18);
-  }}
-  .panou img {{ width:100%; height:100%; object-fit:cover; display:block; }}
-  .fara-poza {{ font-size:3rem; }}
-  .insigna {{
-    position:absolute; top:22px; left:22px; padding:4px 10px; border-radius:999px; font-weight:600; font-size:.85rem;
-    background:linear-gradient(180deg, #7a241b, var(--visiniu)); color:var(--auriu-deschis);
-    border:1px solid rgba(240,200,150,.55);
-  }}
-  .info {{ padding:14px 16px 18px; display:flex; flex-direction:column; gap:8px; flex:1; text-align:center; }}
-  h2 {{ font-family:var(--serif); font-weight:500; font-size:1.08rem; margin:0; color:var(--crem); }}
-  .pret {{ margin:0; font-family:var(--serif); font-size:1.6rem; color:var(--auriu-deschis); }}
-  .vechi {{ font-family:var(--sans); color:var(--gri); text-decoration:line-through; font-size:.85rem; margin-left:6px; }}
-  .magazin {{ margin:0; color:var(--gri); font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; }}
-  .buton {{
-    margin-top:auto; display:block; padding:12px; border-radius:999px; text-decoration:none; font-weight:600;
-    color:#2a1606; background:linear-gradient(180deg, var(--auriu-deschis), var(--auriu) 55%, var(--auriu-inchis));
-    box-shadow:0 4px 16px rgba(219,166,102,.25);
-  }}
-  .buton:hover, .buton:focus-visible {{ filter:brightness(1.08); outline:2px solid var(--auriu-deschis); outline-offset:2px; }}
+  .rand {{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }}
+  .pret {{ font-size:20px; font-weight:600; color:var(--visiniu); }}
+  .pret.mare {{ font-family:var(--serif); font-size:34px; font-weight:700; }}
+  .vechi {{ font-size:14px; color:var(--gri); text-decoration:line-through; }}
+  .insigna {{ position:absolute; top:14px; left:14px; background:var(--visiniu); color:var(--crem); font-size:12px; font-weight:600; padding:4px 10px; border-radius:999px; }}
+  .insigna.mare {{ position:static; margin-left:auto; font-size:13px; padding:5px 11px; }}
+  .fara-poza {{ display:flex; align-items:center; justify-content:center; height:100%; min-height:200px; font-family:var(--serif); color:var(--gri); }}
 
-  /* ideea zilei: rama in arcada, ca in postari */
-  .card.mare {{ grid-column:1/-1; border-color:rgba(219,166,102,.6);
-               background:
-                 radial-gradient(80% 60% at 0% 0%, rgba(97,28,21,.55), transparent 70%),
-                 radial-gradient(70% 60% at 100% 100%, rgba(24,53,33,.55), transparent 70%),
-                 rgba(14,10,8,.96); }}
-  .card.mare .rama {{ padding:22px 22px 0; }}
-  .card.mare .panou {{ border-radius:200px 200px 16px 16px; border-width:2px; aspect-ratio:4/5; }}
-  .card.mare .info {{ padding:18px 22px 24px; justify-content:center; }}
-  .card.mare h2 {{ font-size:1.5rem; }}
-  .card.mare .pret {{ font-size:2.4rem; }}
-  .eticheta {{ margin:0; color:var(--auriu); font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; }}
-  @media (min-width:700px) {{
-    .card.mare {{ flex-direction:row; align-items:stretch; }}
-    .card.mare .rama {{ flex:0 0 42%; padding:26px 0 26px 26px; }}
-    .card.mare .info {{ padding:26px 40px; gap:12px; }}
-    .card.mare .buton {{ margin-top:10px; align-self:center; padding:14px 40px; }}
-  }}
+  .banda {{ background:var(--visiniu); color:#f3e6d4; }}
+  .banda .zona {{ padding-top:20px; padding-bottom:20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px 16px; font-size:14px; letter-spacing:.3px; }}
+  .banda span::before {{ content:"✦"; color:var(--auriu-cald); margin-right:10px; }}
 
-  @media (max-width:560px) {{
-    main {{ grid-template-columns:1fr 1fr; gap:12px; padding:12px 12px 28px; }}
-    .card:not(.mare) .rama {{ padding:8px 8px 0; }}
-    .card:not(.mare) .panou {{ border-radius:10px; box-shadow:0 0 0 3px rgba(97,28,21,.35); }}
-    .card:not(.mare) .insigna {{ top:13px; left:13px; font-size:.75rem; padding:3px 8px; }}
-    .card:not(.mare) .info {{ padding:10px 10px 12px; gap:6px; }}
-    .card:not(.mare) h2 {{ font-size:.9rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }}
-    .card:not(.mare) .pret {{ font-size:1.25rem; }}
-    .card:not(.mare) .vechi {{ display:block; margin:0; }}
-    .card:not(.mare) .magazin {{ font-size:.68rem; }}
-    .card:not(.mare) .buton {{ padding:9px 6px; font-size:.85rem; }}
-  }}
+  .idei {{ padding-top:80px; padding-bottom:40px; }}
+  .titlu-sectiune {{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:36px; }}
+  h2 {{ margin:0; font-family:var(--serif); font-size:clamp(30px, 4vw, 42px); font-weight:600; }}
+  .titlu-sectiune p {{ margin:0; font-size:15px; color:var(--text2); }}
+  .grila {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:28px; }}
+  .card {{ display:flex; flex-direction:column; background:var(--hartie); border:1px solid #e9dcc8; border-radius:16px; overflow:hidden; color:var(--text); transition:transform .2s, box-shadow .2s; }}
+  .card:hover {{ transform:translateY(-3px); box-shadow:0 18px 40px -24px rgba(97,28,21,.4); }}
+  .poza {{ position:relative; display:block; background:#fff; aspect-ratio:1/1; }}
+  .poza img {{ width:100%; height:100%; object-fit:contain; display:block; }}
+  .info {{ display:flex; flex-direction:column; gap:6px; flex:1; padding:18px 20px 20px; border-top:1px solid #f0e6d6; }}
+  .magazin {{ font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--auriu); }}
+  .nume {{ font-family:var(--serif); font-size:18px; line-height:1.3; font-weight:600; margin-bottom:8px; }}
+  .card .rand {{ margin-top:auto; }}
+  .vezi {{ margin-left:auto; font-size:13px; font-weight:600; color:var(--visiniu); }}
 
-  .liste {{ max-width:1040px; margin:6px auto 30px; padding:0 16px; }}
-  .liste-cutie {{
-    border:1px solid rgba(219,166,102,.5); border-radius:18px; padding:26px 20px; text-align:center;
-    background:
-      radial-gradient(70% 90% at 0% 0%, rgba(97,28,21,.6), transparent 70%),
-      radial-gradient(70% 90% at 100% 100%, rgba(24,53,33,.6), transparent 70%),
-      rgba(14,10,8,.95);
-  }}
-  .liste h2 {{ font-size:1.5rem; color:var(--auriu-deschis); }}
-  .liste p {{ color:var(--gri); margin:8px auto 16px; max-width:520px; }}
-  .bugete {{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:22px; }}
-  .bugete a {{ padding:9px 18px; border-radius:999px; border:1px solid rgba(219,166,102,.6);
-              color:var(--auriu-deschis); text-decoration:none; font-weight:500; }}
-  .bugete a:hover {{ background:rgba(219,166,102,.12); }}
-  .liste .buton {{ display:inline-block; padding:13px 30px; }}
+  .bugete {{ padding-top:60px; padding-bottom:60px; }}
+  .cutie {{ background:var(--nisip); border-radius:24px; padding:56px 40px; text-align:center; }}
+  .cutie p {{ margin:12px 0 30px; color:var(--text2); }}
+  .sume {{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; }}
+  .sume a {{ background:var(--hartie); border:1px solid var(--linie2); padding:18px 34px; border-radius:14px; font-family:var(--serif); font-size:22px; color:var(--text); transition:border-color .2s; }}
+  .sume a:hover {{ border-color:var(--visiniu); }}
+  .sume b {{ color:var(--visiniu); }}
 
-  footer {{ max-width:640px; margin:0 auto; padding:0 20px 40px; text-align:center; color:var(--gri); font-size:.8rem; }}
-  footer .linie {{ margin-bottom:14px; }}
+  .lista {{ max-width:760px; padding-top:40px; padding-bottom:90px; text-align:center; }}
+  .lista p.mic {{ margin:14px 0 28px; color:var(--text2); }}
+
+  footer {{ background:var(--text); color:#d9c8b4; }}
+  footer .zona {{ padding-top:48px; padding-bottom:48px; display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between; }}
+  footer .logo {{ color:#f3e6d4; font-size:22px; display:block; margin-bottom:10px; }}
+  footer p {{ margin:0; font-size:14px; line-height:1.7; max-width:460px; }}
+  footer nav a {{ color:var(--auriu-cald); }}
+
+  a:focus-visible {{ outline:2px solid var(--visiniu); outline-offset:3px; }}
+
+  @media (max-width:620px) {{
+    .zona {{ padding-left:16px; padding-right:16px; }}
+    header .zona {{ justify-content:center; text-align:center; }}
+    nav {{ justify-content:center; }}
+    .erou {{ padding-top:40px; padding-bottom:48px; gap:36px; }}
+    .arcada-poza img {{ height:240px; }}
+    .idei {{ padding-top:56px; }}
+    .grila {{ grid-template-columns:1fr 1fr; gap:12px; }}
+    .info {{ padding:12px 12px 14px; }}
+    .nume {{ font-size:15px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }}
+    .magazin {{ font-size:10px; letter-spacing:1px; }}
+    .pret {{ font-size:17px; }}
+    .vezi {{ display:none; }}
+    .insigna {{ top:8px; left:8px; font-size:11px; padding:3px 8px; }}
+    .cutie {{ padding:40px 20px; }}
+    .sume a {{ padding:14px 22px; font-size:19px; }}
+  }}
 </style>
 </head>
 <body>
 <header>
-  <div class="fundita">🎁</div>
-  <h1>Cadouri pe Buget</h1>
-  <p class="sub">Idei de cadouri sub 50, 100 și 200 de lei</p>
-  <p class="data">Ideile de azi · {data} · prețuri verificate dimineața</p>
+  <div class="zona">
+    <a class="logo" href="#">Cadouri <i>pe</i> Buget</a>
+    <nav>
+      <a href="#idei">Ideile de azi</a>
+      <a href="#bugete">Pe bugete</a>
+      <a href="#lista">Lista săptămânală</a>
+      <a href="#despre">Despre</a>
+    </nav>
+  </div>
 </header>
-<main>{carduri}
-</main>
-<section class="liste">
-  <div class="liste-cutie">
-    <h2>Vrei mai multe idei?</h2>
-    <p>Liste alese de mână, pe bugete clare, cu cadouri verificate.</p>
-    <div class="bugete">
-      <a href="{LISTE}" target="_blank" rel="noopener">Sub 50 lei</a>
-      <a href="{LISTE}" target="_blank" rel="noopener">Sub 100 lei</a>
-      <a href="{LISTE}" target="_blank" rel="noopener">Sub 200 lei</a>
+
+<section class="zona erou">
+  <div class="erou-text">
+    <p class="supra">{data} · ediția de azi</p>
+    <h1>Cadoul potrivit,<br><i>la prețul potrivit.</i></h1>
+    <p class="intro">În fiecare dimineață alegem 10 cadouri reduse, între 30 și 400 de lei, din magazine românești. Tu doar alegi.</p>
+    <div class="butoane">
+      <a class="buton plin" href="#idei">Vezi cele {len(produse)} idei</a>
+      <a class="buton" href="#bugete">Alege după buget</a>
     </div>
-    <div class="linie"><span>✦</span></div>
-    <p><strong style="color:var(--crem)">Primește în fiecare joi 5 cadouri bune sub 100 lei</strong>, direct pe e-mail.
-    Te poți dezabona oricând.</p>
-    <a class="buton" href="{LISTE}#form-input-8976bb08" target="_blank" rel="noopener">Vreau lista pe e-mail</a>
+  </div>
+  <div class="erou-vedeta">{vedeta(sus, de_pe_fb)}
   </div>
 </section>
-<footer>
-  <div class="linie"><span>✦</span></div>
-  <p>O idee nouă în fiecare zi pe pagina noastră de Facebook. Prețurile și stocul se pot schimba
-  în timpul zilei, verifică pe site-ul magazinului.</p>
-  <p>Link-urile sunt de afiliere: dacă cumperi, primim un mic comision, fără costuri în plus pentru tine.</p>
+
+<section class="banda">
+  <div class="zona">
+    <span>10 idei noi în fiecare dimineață</span>
+    <span>Prețuri verificate zilnic</span>
+    <span>Link direct la magazinul oficial</span>
+  </div>
+</section>
+
+<section id="idei" class="zona idei">
+  <div class="titlu-sectiune">
+    <h2>Ideile de azi</h2>
+    <p>Actualizat azi dimineață</p>
+  </div>
+  <div class="grila">{carduri}
+  </div>
+</section>
+
+<section id="bugete" class="zona bugete">
+  <div class="cutie">
+    <h2>Ai un buget în minte?</h2>
+    <p>Liste alese pe sume, cu cadouri verificate.</p>
+    <div class="sume">
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>50</b> lei</a>
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>100</b> lei</a>
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>200</b> lei</a>
+    </div>
+  </div>
+</section>
+
+<section id="lista" class="zona lista">
+  <p class="supra">În fiecare joi, pe e-mail</p>
+  <h2>5 cadouri sub 100 de lei</h2>
+  <p class="mic">Fără spam. Te dezabonezi oricând, cu un click.</p>
+  <a class="buton plin" href="{LISTE}#form-input-8976bb08" target="_blank" rel="noopener">Vreau lista pe e-mail</a>
+</section>
+
+<footer id="despre">
+  <div class="zona">
+    <div>
+      <span class="logo">Cadouri pe Buget</span>
+      <p>O idee nouă în fiecare zi și pe pagina noastră de Facebook. Linkurile sunt de afiliere: dacă cumperi,
+      primim un mic comision, fără niciun cost în plus pentru tine. Prețurile și stocul se pot schimba în timpul zilei,
+      verifică pe site-ul magazinului.</p>
+    </div>
+    <nav>
+      <a href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a>
+      <a href="{LISTE}" target="_blank" rel="noopener">Liste pe bugete</a>
+    </nav>
+  </div>
 </footer>
 </body>
 </html>
