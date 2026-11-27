@@ -36,6 +36,7 @@ def e(text):
 
 ZILE = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"]
 INSTAGRAM = "https://www.instagram.com/cadouripebuget/"
+FACEBOOK = "https://www.facebook.com/profile.php?id=61596931285889"
 
 
 def pret_vechi(p):
@@ -291,11 +292,12 @@ def main():
   <div class="zona">
     <div>
       <span class="logo">Cadouri pe Buget</span>
-      <p>O idee nouă în fiecare zi și pe pagina noastră de Facebook. Linkurile sunt de afiliere: dacă cumperi,
+      <p>O idee nouă în fiecare zi și pe <a href="{FACEBOOK}" target="_blank" rel="noopener" style="color:#dba666">pagina noastră de Facebook</a>. Linkurile sunt de afiliere: dacă cumperi,
       primim un mic comision, fără niciun cost în plus pentru tine. Prețurile și stocul se pot schimba în timpul zilei,
       verifică pe site-ul magazinului.</p>
     </div>
     <nav>
+      <a href="{FACEBOOK}" target="_blank" rel="noopener">Facebook</a>
       <a href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a>
       <a href="{LISTE}" target="_blank" rel="noopener">Liste pe bugete</a>
     </nav>
