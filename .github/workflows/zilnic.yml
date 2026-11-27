@@ -32,6 +32,12 @@ jobs:
           pip install --quiet pillow
           python imagine_postare.py
 
+      - name: Fa Reel-ul zilei (clip vertical, 3 produse)
+        continue-on-error: true   # daca nu merge, se posteaza poza, ca pana acum
+        run: |
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python reel.py
+
       - name: Salveaza rezultatul in repo
         run: |
           git config user.name "cadouri-bot"
@@ -40,7 +46,13 @@ jobs:
           git commit -m "Idei cadouri $(date +%F)" || echo "Nimic nou"
           git push
 
-      - name: Posteaza pe Facebook
+      - name: Posteaza Reel-ul pe Facebook
+        continue-on-error: true   # daca nu merge, pasul urmator posteaza poza
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python post_reel_facebook.py
+
+      - name: Posteaza pe Facebook (poza, doar daca Reel-ul nu a iesit)
         continue-on-error: true   # daca Facebook da eroare, ideile raman salvate
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}

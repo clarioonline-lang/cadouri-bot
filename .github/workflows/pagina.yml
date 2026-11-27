@@ -43,6 +43,14 @@ jobs:
           mkdir -p site/imagini
           cp imagini/*.jpg site/imagini/ 2>/dev/null || echo "Nicio imagine azi"
 
+      - name: Pune Reel-ul pe vitrina (de descarcat de pe telefon, pentru Instagram)
+        continue-on-error: true
+        run: |
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python reel.py
+          mkdir -p site/imagini
+          cp imagini/reel.mp4 site/imagini/ 2>/dev/null || echo "Niciun Reel azi"
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v4
@@ -74,7 +82,7 @@ jobs:
         run: |
           git config user.name "cadouri-bot"
           git config user.email "cadouri-bot@users.noreply.github.com"
-          git checkout -- idei/facebook_post.json 2>/dev/null || true
+          git checkout -- idei/facebook_post.json idei/reel.json idei/FACEBOOK.md 2>/dev/null || true
           git add idei/postat_ig.txt 2>/dev/null || true
           git commit -m "Postat pe Instagram $(date +%F)" || echo "Nimic nou"
           git pull --rebase --quiet || true
