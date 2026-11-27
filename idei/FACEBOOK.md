@@ -1,21 +1,21 @@
-# Postare Facebook – 2026-11-26
-**Tema:** Gadgeturi și idei trăsnite · **Postare:** automat, ~06:00
+# Postare Facebook – 2026-11-27
+**Tema:** Cea mai mare reducere a săptămânii · **Postare:** automat, ~06:00
 
 ## Produsul ales
 
-**Pachet Cadou pentru Bucatarul Ordonat** · 104 lei · -56% · Mindblower.ro
+**Bricheta Gamer Retro cu incarcare USB** · 73 lei · -59% · Mindblower.ro
 
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/pachet-cadou-pentru-bucatarul-ordonat-716304.jpg)
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/bricheta-gamer-retro-cu-incarcare-usb-444967.png)
 
 Salvează poza: apasă lung pe ea → Salvează.
 
 ## Textul postării (fără link)
 
 ```
-Gadgeturi și idei trăsnite: ideea de azi ✨
+Tema zilei: Cea mai mare reducere a săptămânii 👇
 
-🎁 Pachet Cadou pentru Bucatarul Ordonat
-💸 104 lei în loc de ~236 lei (-56%)
+🎁 Bricheta Gamer Retro cu incarcare USB
+💸 73 lei în loc de ~178 lei (-59%)
 
 Vrei link-ul? Scrie CADOU în comentarii și ți-l trimit pe Messenger 📩
 
@@ -28,16 +28,16 @@ Urmărește pagina pentru o idee nouă în fiecare zi 🔔
 
 ```
 Salut! 🎁 Uite link-ul:
-• Pachet Cadou pentru Bucatarul Ordonat – 104 lei: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpachet-cadou-pentru-bucatarul-ordonat.html
+• Bricheta Gamer Retro cu incarcare USB – 73 lei: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fbricheta-gamer-retro-cu-incarcare-usb.html
 
 (Link de afiliere: dacă cumperi, primesc un mic comision, fără costuri în plus pentru tine.)
 ```
 
 ## Rezervă (dacă primul nu-ți place)
 
-**Set 2 casute magice de Craciun cu LED** · 68 lei · -50%
+**Cana Cafea cu Pereti Dubli 450 ml** · 36 lei · -50%
 
-🔗 https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-2-casute-magice-de-craciun-cu-led.html
+🔗 https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-cafea-cu-pereti-dubli-450-ml.html
 
 ---
 *Nu pune link-ul în postare sau în comentarii: Facebook limitează paginile la câteva link-uri pe lună. Link-ul îl trimiți doar pe Messenger.*
