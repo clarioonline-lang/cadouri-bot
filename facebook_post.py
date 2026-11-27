@@ -211,6 +211,15 @@ def main():
                             for q in alese]
     intro_ig = "🏆 Top 5 idei de cadouri sub 100 lei din săptămâna asta:" if len(alese) > 1 else intro
     de_postat["text_instagram"] = text_instagram(alese, intro_ig)
+    # Instagram, manual (pana se poate lega contul de pagina)
+    n_poze = len(de_postat.get("produse") or [])
+    out.append("\n## Instagram (manual, de pe telefon)\n\n"
+               "1. Deschide imaginile de mai jos pe telefon (apar după ~6:10), apasă lung → Salvează.\n"
+               "2. În Instagram: + → Postare → alege imaginile" + (" în ordine" if n_poze > 1 else "") + ".\n"
+               "3. Lipește textul de mai jos și publică.\n\n"
+               + "".join(f"- https://cadouripebuget.online/imagini/postare-{i}.jpg\n" for i in range(1, n_poze + 1))
+               + f"\n```\n{de_postat.get('text_instagram', '')}\n```\n")
+
     IESIRE_JSON.write_text(json.dumps(de_postat, ensure_ascii=False, indent=2), encoding="utf-8")
     IESIRE.write_text("".join(out), encoding="utf-8")
     print(f"Scris: {IESIRE}")
