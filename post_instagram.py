@@ -22,7 +22,7 @@ from pathlib import Path
 API = "https://graph.facebook.com/v26.0"
 POSTARE = Path("idei/facebook_post.json")
 JURNAL = Path("idei/postat_ig.txt")
-SITE = "https://clarioonline-lang.github.io/cadouri-bot/imagini/"
+SITE = "https://cadouripebuget.online/imagini/"
 
 
 class EroareFacebook(Exception):

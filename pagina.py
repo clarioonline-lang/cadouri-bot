@@ -24,6 +24,7 @@ from facebook_post import citeste_idei
 INTRARE = Path("idei/AZI.md")
 POSTARE = Path("idei/facebook_post.json")
 IESIRE = Path("site/index.html")
+LISTE = "https://cadouripebuget.systeme.io/cadouri"   # listele pe bugete + abonarea (Systeme.io)
 
 LUNI = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie",
         "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
@@ -200,6 +201,22 @@ def main():
     .card:not(.mare) .buton {{ padding:9px 6px; font-size:.85rem; }}
   }}
 
+  .liste {{ max-width:1040px; margin:6px auto 30px; padding:0 16px; }}
+  .liste-cutie {{
+    border:1px solid rgba(219,166,102,.5); border-radius:18px; padding:26px 20px; text-align:center;
+    background:
+      radial-gradient(70% 90% at 0% 0%, rgba(97,28,21,.6), transparent 70%),
+      radial-gradient(70% 90% at 100% 100%, rgba(24,53,33,.6), transparent 70%),
+      rgba(14,10,8,.95);
+  }}
+  .liste h2 {{ font-size:1.5rem; color:var(--auriu-deschis); }}
+  .liste p {{ color:var(--gri); margin:8px auto 16px; max-width:520px; }}
+  .bugete {{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:22px; }}
+  .bugete a {{ padding:9px 18px; border-radius:999px; border:1px solid rgba(219,166,102,.6);
+              color:var(--auriu-deschis); text-decoration:none; font-weight:500; }}
+  .bugete a:hover {{ background:rgba(219,166,102,.12); }}
+  .liste .buton {{ display:inline-block; padding:13px 30px; }}
+
   footer {{ max-width:640px; margin:0 auto; padding:0 20px 40px; text-align:center; color:var(--gri); font-size:.8rem; }}
   footer .linie {{ margin-bottom:14px; }}
 </style>
@@ -213,6 +230,21 @@ def main():
 </header>
 <main>{carduri}
 </main>
+<section class="liste">
+  <div class="liste-cutie">
+    <h2>Vrei mai multe idei?</h2>
+    <p>Liste alese de mână, pe bugete clare, cu cadouri verificate.</p>
+    <div class="bugete">
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub 50 lei</a>
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub 100 lei</a>
+      <a href="{LISTE}" target="_blank" rel="noopener">Sub 200 lei</a>
+    </div>
+    <div class="linie"><span>✦</span></div>
+    <p><strong style="color:var(--crem)">Primește în fiecare joi 5 cadouri bune sub 100 lei</strong>, direct pe e-mail.
+    Te poți dezabona oricând.</p>
+    <a class="buton" href="{LISTE}#form-input-8976bb08" target="_blank" rel="noopener">Vreau lista pe e-mail</a>
+  </div>
+</section>
 <footer>
   <div class="linie"><span>✦</span></div>
   <p>O idee nouă în fiecare zi pe pagina noastră de Facebook. Prețurile și stocul se pot schimba
