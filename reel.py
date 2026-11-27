@@ -7,8 +7,8 @@ Structura (ce a mers pe pagina: Reel, mai multe produse pe o tema, indemn la dis
   8,2–9,6 s  final: „Toate ideile de azi, cu link” + cadouripebuget.online
 Sus, pe tot clipul: „Trimite-i asta cuiva care nu știe ce să-ți ia”.
 
-Muzica se adauga din aplicatia Instagram (trend + licenta). Pe Facebook, post_reel_facebook.py
-il posteaza singur, fara muzica.
+Muzica: o melodie pe zi din muzica/ (6 piese din Meta Sound Collection, gratuite pe Facebook si
+Instagram, taiate la 9,6 s cu final lin). Pe Instagram se poate inlocui din aplicatie cu un sunet la moda.
 
 Rulare: python reel.py  -> imagini/reel.mp4 + idei/reel.json (textele) + sectiune in FACEBOOK.md
 Textul important sta intre y=200 si y=1450: jos si in dreapta sunt butoanele aplicatiei.
@@ -138,7 +138,7 @@ def usor(t):  # ease-out
     return 1 - (1 - t) ** 3
 
 
-def randeaza(produse, poze, iesire, subtitlu="care par mult mai scumpe"):
+def randeaza(produse, poze, iesire, subtitlu="care par mult mai scumpe", muzica=None):
     pret_max = max(p["pret"] for p in produse)
     pret_max = (pret_max // 5 + 1) * 5 if pret_max % 5 else pret_max
     baza = fundal()
@@ -149,10 +149,13 @@ def randeaza(produse, poze, iesire, subtitlu="care par mult mai scumpe"):
     t_carlig, t_prod, t_final = 1.6, 2.2, 1.4
     total = int((t_carlig + 3 * t_prod + t_final) * FPS)
     Path(iesire).parent.mkdir(parents=True, exist_ok=True)
-    ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-                           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
-                           "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(iesire)],
-                          stdin=subprocess.PIPE)
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
+           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
+    if muzica:   # melodie din Meta Sound Collection (taiata deja la 9,6 s, cu final lin)
+        cmd += ["-i", str(muzica), "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-shortest"]
+    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+            "-movflags", "+faststart", str(iesire)]
+    ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for k in range(total):
         t = k / FPS
         if t < t_carlig:
@@ -237,7 +240,10 @@ def main():
     azi = date.today()
     SUS = INDEMNURI[azi.toordinal() % len(INDEMNURI)]
     subtitlu = SUBTITLURI[azi.toordinal() % len(SUBTITLURI)]
-    randeaza(trei, poze, IESIRE, subtitlu)
+    melodii = sorted(Path(__file__).resolve().parent.glob("muzica/*.m4a"))
+    muzica = melodii[azi.toordinal() % len(melodii)] if melodii else None
+    randeaza(trei, poze, IESIRE, subtitlu, muzica)
+    print(f"Muzica: {muzica.name if muzica else 'fara'}")
     fb, ig = texte(trei, SUS[2])
     INFO.write_text(json.dumps({"data": azi.isoformat(), "fisier": str(IESIRE), "text_facebook": fb,
                                 "text_instagram": ig, "produse": [p["nume"] for p in trei]},
