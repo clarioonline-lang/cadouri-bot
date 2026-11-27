@@ -21,6 +21,7 @@ jobs:
       - name: Genereaza ideile
         env:
           FEED_URL: ${{ secrets.FEED_URL }}
+          FEED_URL_2: ${{ secrets.FEED_URL_2 }}
         run: python idei_cadouri.py
 
       - name: Genereaza postarea de Facebook
