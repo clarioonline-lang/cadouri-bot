@@ -1,22 +1,22 @@
-# Idei de cadouri - 2026-11-27
-10 produse alese din 2526 (pret 30-400 lei).
+# Idei de cadouri - 2026-11-28
+10 produse alese din 4636 (pret 30-400 lei).
 
 ---
 
-## 1. Cana Cafea cu Pereti Dubli 450 ml
-**36 lei** · **-50%** · Mindblower.ro · cadouri secret santa
+## 1. Cana cu amestecare automata Lenes
+**54 lei** · **-50%** · Mindblower.ro · gadget
 
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/cana-cafea-cu-pereti-dubli-450-ml-249586.png)
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/cana-cu-amestecare-automata-lenes-026908.jpg)
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-cafea-cu-pereti-dubli-450-ml.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-magica-mix-go.html
 
 **Caption propus:**
 
 ```
 Nu știi ce să-i iei? 🎁
 
-Cana Cafea cu Pereti Dubli 450 ml
-Acum la 36 lei (redus cu 50% de la 72 lei).
+Cana cu amestecare automata Lenes
+Acum la 54 lei (redus cu 50% de la 109 lei).
 
 Link în bio 🔗
 
@@ -25,64 +25,20 @@ Link în bio 🔗
 
 ---
 
-## 2. Set cadou Caligrafie Vintage cu Pana albastra si Accesorii
-**68 lei** · **-49%** · Mindblower.ro · gadget
+## 2. Decoratiune din lemn cu LED pentru Craciun
+**60 lei** · **-50%** · Mindblower.ro · gadget
 
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/set-cadou-caligrafie-vintage-cu-pana-albastra-si-accesorii-309680.png)
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/decoratiune-din-lemn-cu-led-pentru-craciun-344216.png)
 
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fset-cadou-caligrafie-vintage-cu-pana-albastra-si-accesorii.html
-
-**Caption propus:**
-
-```
-Cadou sub radar, efect garantat ✨
-
-Set cadou Caligrafie Vintage cu Pana albastra si Accesorii
-Acum la 68 lei (redus cu 49% de la 132 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 3. Bricheta Gamer Retro cu incarcare USB
-**73 lei** · **-59%** · Mindblower.ro · Top 100 Cadouri
-
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/bricheta-gamer-retro-cu-incarcare-usb-444967.png)
-
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fbricheta-gamer-retro-cu-incarcare-usb.html
-
-**Caption propus:**
-
-```
-Cadou sub radar, efect garantat ✨
-
-Bricheta Gamer Retro cu incarcare USB
-Acum la 73 lei (redus cu 59% de la 177 lei).
-
-Link în bio 🔗
-
-#ideicadouri #cadouri #cadou #cadouperfect #romania
-```
-
----
-
-## 4. Ceas LED cu incarcare wireless
-**70 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
-
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/ceas-led-cu-incarcare-wireless-466671.png)
-
-🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fceas-led-cu-incarcare-wireless.html
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fdecoratiune-din-lemn-cu-led-pentru-craciun.html
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Ceas LED cu incarcare wireless
-Acum la 70 lei (redus cu 50% de la 139 lei).
+Decoratiune din lemn cu LED pentru Craciun
+Acum la 60 lei (redus cu 50% de la 121 lei).
 
 Link în bio 🔗
 
@@ -91,20 +47,64 @@ Link în bio 🔗
 
 ---
 
-## 5. Joc X si O din metal
-**67 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+## 3. Lampa Glob de Cristal Astronaut
+**34 lei** · **-50%** · Mindblower.ro · Top 100 Cadouri
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/joc-metalic-x-si-o-1774-4532.jpg)
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/lampa-glob-de-cristal-astronaut-444755.jpg)
 
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=f38241c6f&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Flampa-glob-de-cristal-astronaut.html
+
+**Caption propus:**
+
+```
+Cadou sub radar, efect garantat ✨
+
+Lampa Glob de Cristal Astronaut
+Acum la 34 lei (redus cu 50% de la 69 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 4. Pachet Cadou pentru Calatorii
+**194 lei** · **-56%** · Mindblower.ro · gadget
+
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/pachet-cadou-pentru-calatorii-134798.jpg)
+
+🔗 Link afiliat: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpachet-cadou-pentru-calatorii.html
+
+**Caption propus:**
+
+```
+Nu știi ce să-i iei? 🎁
+
+Pachet Cadou pentru Calatorii
+Acum la 194 lei (redus cu 56% de la 436 lei).
+
+Link în bio 🔗
+
+#ideicadouri #cadouri #cadou #cadouperfect #romania
+```
+
+---
+
+## 5. Ceas barbatesc Quartz, Geneva Premier, Maro
+**90 lei** · **-50%** · Watch24.ro · CEASURI BARBATESTI
+
+![poza](https://www.watch24.ro/images/products/img1/2743/full/geneva-ceas-barbatesc-quartz-geneva-premier-maro-70336.png)
+
+🔗 Link afiliat: https://profitshare.ro/lps/8S4/hU0/?redirect=https%3A%2F%2Fwww.watch24.ro%2Fceasuri-barbatesti%2Fgeneva%2F2743-ceas-barbatesc-quartz-geneva-premier-maro%2F
 
 **Caption propus:**
 
 ```
 Idee de cadou care chiar se folosește 👇
 
-Joc X si O din metal
-Acum la 67 lei (redus cu 30% de la 96 lei).
+Ceas barbatesc Quartz, Geneva Premier, Maro
+Acum la 90 lei (redus cu 50% de la 180 lei).
 
 Link în bio 🔗
 
@@ -113,20 +113,20 @@ Link în bio 🔗
 
 ---
 
-## 6. Set 2 Pahare sampanie Elegante   ,Happy Birthday
-**63 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+## 6. Ceas dama Quartz, Geneva Crystal Auriu
+**60 lei** · **-50%** · Watch24.ro · CEASURI DAMA
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/set-2-pahare-champagne-happy-birthday-707591.jpg)
+![poza](https://www.watch24.ro/images/products/img1/2292/full/ceas-dama-geneva-crystal-auriu-4521.jpeg)
 
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=qJfv4kSkAenp&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/8S4/hU0/?redirect=https%3A%2F%2Fwww.watch24.ro%2Fceasuri-dama%2Fgeneva%2F2292-ceas-dama-quartz-geneva-crystal-auriu%2F
 
 **Caption propus:**
 
 ```
-Cadou sub radar, efect garantat ✨
+Idee de cadou care chiar se folosește 👇
 
-Set 2 Pahare sampanie Elegante   ,Happy Birthday
-Acum la 63 lei (redus cu 30% de la 90 lei).
+Ceas dama Quartz, Geneva Crystal Auriu
+Acum la 60 lei (redus cu 50% de la 120 lei).
 
 Link în bio 🔗
 
@@ -135,20 +135,20 @@ Link în bio 🔗
 
 ---
 
-## 7. Joc de petrecere Tik Tok Ring Toss - include 4 pahare
-**89 lei** · **-30%** · 3gifts.ro  · Cadouri evenimente
+## 7. Ceas Unisex, Quartz, Marea Sunrise B35325/33
+**70 lei** · **-50%** · Watch24.ro · CEASURI DAMA
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/joc-de-petrecere-tik-tok-ring-toss-include-2-pahare-copie-583308.jpg)
+![poza](https://www.watch24.ro/images/products/img1/6982/full/ceas-dama-marea-b35325-33-sunrise-10015.png)
 
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=tDPJNuJkQX52&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/8S4/hU0/?redirect=https%3A%2F%2Fwww.watch24.ro%2Fceasuri-dama%2Fmarea%2F6982-ceas-unisex-quartz-marea-sunrise-b35325-33%2F
 
 **Caption propus:**
 
 ```
 Nu știi ce să-i iei? 🎁
 
-Joc de petrecere Tik Tok Ring Toss - include 4 pahare
-Acum la 89 lei (redus cu 30% de la 127 lei).
+Ceas Unisex, Quartz, Marea Sunrise B35325/33
+Acum la 70 lei (redus cu 50% de la 140 lei).
 
 Link în bio 🔗
 
@@ -157,20 +157,20 @@ Link în bio 🔗
 
 ---
 
-## 8. Set cadou pentru Soferi
-**91 lei** · **-30%** · 3gifts.ro  · Pentru cine
+## 8. Ceas barbatesc Quartz, BUSINESS Cronograf, Data, Zi a saptamanii
+**90 lei** · **-50%** · Watch24.ro · CEASURI BARBATESTI
 
-![poza](https://gomagcdn.ro/domains/3gifts.ro/files/product/large/set-cadou-pentru-soferi-609462.jpg)
+![poza](https://www.watch24.ro/images/products/img1/4937/full/ceas-barbatesc-oubels-business-cronograf-data-zi-a-saptamanii-70330.png)
 
-🔗 Link afiliat: https://event.2performant.com/events/click?ad_type=product_store&unique=8f79f7c2b&aff_code=3dece1a07&campaign_unique=d7287555a
+🔗 Link afiliat: https://profitshare.ro/lps/8S4/hU0/?redirect=https%3A%2F%2Fwww.watch24.ro%2Fceasuri-barbatesti%2Foubels%2F4937-ceas-barbatesc-quartz-business-cronograf-data-zi-a-saptamanii%2F
 
 **Caption propus:**
 
 ```
 Pentru cine are deja tot 😄
 
-Set cadou pentru Soferi
-Acum la 91 lei (redus cu 30% de la 130 lei).
+Ceas barbatesc Quartz, BUSINESS Cronograf, Data, Zi a saptamanii
+Acum la 90 lei (redus cu 50% de la 180 lei).
 
 Link în bio 🔗
 
@@ -179,20 +179,20 @@ Link în bio 🔗
 
 ---
 
-## 9. Set Cadou Condimente Internaționale Around The World
-**129 lei** · Giftspot.ro · Kituri de Bere Artizanală
+## 9. Aparat pentru gaufre/waffle cu placi interschimbabile pentru sandwich-uri Livoo DOP232
+**190 lei** · **-47%** · Hotpick.ro · Aparate gofre
 
-![poza](https://www.giftspot.ro/wp-content/uploads/2026/09/set-cadou-condimente-interna-ionale-around-the-world.jpg)
+![poza](https://hotpick.ro/image/catalog/Delta/LIVOO/Aparat-pentru-gaufre-waffle-cu-placi-interschimbabile-pentru-sandwich-uri-Livoo-DOP232.jpg)
 
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Fset-cadou-condimente-internationale-around-the-world%2F
+🔗 Link afiliat: https://profitshare.ro/lps/RlB/hU0/?redirect=https%3A%2F%2Fhotpick.ro%2Faparat-pentru-gaufre-waffle-cu-placi-interschimbabile-pentru-sandwich-uri-livoo-dop232
 
 **Caption propus:**
 
 ```
-Cadou sub radar, efect garantat ✨
+Idee de cadou care chiar se folosește 👇
 
-Set Cadou Condimente Internaționale Around The World
-Costă 129 lei.
+Aparat pentru gaufre/waffle cu placi interschimbabile pentru sandwich-uri Livoo DOP232
+Acum la 190 lei (redus cu 47% de la 360 lei).
 
 Link în bio 🔗
 
@@ -201,20 +201,20 @@ Link în bio 🔗
 
 ---
 
-## 10. Lampa LED cu Peisaj de Nisip
-**115 lei** · Giftspot.ro · Accesorii Birou
+## 10. Masina de tocat electrica Adler AD 4813
+**325 lei** · **-41%** · Hotpick.ro · Masini de tocat si feliat
 
-![poza](https://www.giftspot.ro/wp-content/uploads/2024/03/lampa-led-cu-peisaj-de-nisip.jpg)
+![poza](https://hotpick.ro/image/catalog/Adler/Adler_nou/Masina-de-tocat-electrica-Adler-AD-4813.jpg)
 
-🔗 Link afiliat: https://profitshare.ro/lps/m9H/hU0/?redirect=https%3A%2F%2Fwww.giftspot.ro%2Fcadou%2Flampa-led-cu-peisaj-de-nisip%2F
+🔗 Link afiliat: https://profitshare.ro/lps/RlB/hU0/?redirect=https%3A%2F%2Fhotpick.ro%2Fmasina-de-tocat-electrica-adler-ad-4813
 
 **Caption propus:**
 
 ```
 Cadou sub radar, efect garantat ✨
 
-Lampa LED cu Peisaj de Nisip
-Costă 115 lei.
+Masina de tocat electrica Adler AD 4813
+Acum la 325 lei (redus cu 41% de la 550 lei).
 
 Link în bio 🔗
 
