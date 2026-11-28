@@ -58,6 +58,12 @@ jobs:
           mkdir -p site/imagini
           cp imagini/reel.mp4 site/imagini/ 2>/dev/null || echo "Niciun Reel azi"
 
+      - name: Deseneaza caruselul TikTok (cadouripebuget.online/tiktok/)
+        continue-on-error: true
+        run: |
+          pip install --quiet pillow
+          python tiktok_carusel.py deseneaza
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v4

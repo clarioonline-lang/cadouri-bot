@@ -39,6 +39,13 @@ jobs:
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
           python reel.py
 
+      - name: Alege produsele pentru caruselul TikTok
+        continue-on-error: true
+        env:
+          FEED_URL: ${{ secrets.FEED_URL }}
+          FEED_URL_2: ${{ secrets.FEED_URL_2 }}
+        run: python tiktok_carusel.py alege
+
       - name: Verifica linkurile de afiliere (Profitshare + 2Performant)
         continue-on-error: true   # daca nu merge, restul ruleaza normal
         timeout-minutes: 20
