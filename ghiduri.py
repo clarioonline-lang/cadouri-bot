@@ -54,6 +54,8 @@ def produs_card(ref, ghid, feed, azi_txt):
         p = (feed or {}).get(ref["feed"])
         if not p or not p.get("link", "").startswith("http"):
             return None, None
+        if ghid.get("pret_max") and p["pret"] > ghid["pret_max"]:
+            return None, None  # s-a scumpit peste bugetul din titlu
         nume, magazin = ref.get("nume") or p["nume"], p["magazin"].replace(".ro", "").replace(".com", "")
         pret, pret_vechi, link, poza = p["pret"], (p["pret_vechi"] if p["discount"] >= 5 else None), p["link"], p.get("imagine", "")
         nota = f"Preț actualizat azi, {azi_txt}"

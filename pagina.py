@@ -109,6 +109,17 @@ def main():
 
     azi = date.today()
     data = f"{ZILE[azi.weekday()]}, {azi.day} {LUNI[azi.month - 1]}"
+    # banda spre ghid: ghidul de sezon (Mos Nicolae pana pe 6 dec., apoi Craciun)
+    if azi.month == 11 or (azi.month == 12 and azi.day <= 6):
+        banda_link = "ghiduri/cadouri-mos-nicolae-sub-50-lei.html"
+        banda_supra = "Moș Nicolae · 6 decembrie"
+        banda_titlu = "Cadouri de Moș Nicolae sub 50 lei"
+        banda_text = "23 de idei care încap în ghetuță, plus până când comanzi ca să ajungă la timp →"
+    else:
+        banda_link = "ghiduri/cadouri-craciun-sub-100-lei-pentru-ea.html"
+        banda_supra = "Ghid de Crăciun"
+        banda_titlu = "Cadouri de Crăciun sub 100 lei pentru ea"
+        banda_text = "20 de idei pe tipuri de femei, plus cum afli mărimea inelului fără să te dai de gol →"
     carduri = "".join(card(p) for p in restul)
     emag_butoane = "".join(f'\n    <a href="{e(u)}" target="_blank" rel="sponsored noopener"><span>{e(t)}</span><span class="sageata">→</span></a>'
                            for t, u in EMAG)
@@ -312,10 +323,10 @@ def main():
 </section>
 
 <section class="zona ghiduri-acasa">
-  <a class="ghid-banda" href="ghiduri/cadouri-craciun-sub-100-lei-pentru-ea.html">
-    <span class="supra">Ghid nou</span>
-    <span class="ghid-banda-titlu">Cadouri de Crăciun sub 100 lei pentru ea</span>
-    <span class="ghid-banda-text">20 de idei pe tipuri de femei, plus cum afli mărimea inelului fără să te dai de gol →</span>
+  <a class="ghid-banda" href="{banda_link}">
+    <span class="supra">{banda_supra}</span>
+    <span class="ghid-banda-titlu">{banda_titlu}</span>
+    <span class="ghid-banda-text">{banda_text}</span>
   </a>
 </section>
 
