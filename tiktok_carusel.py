@@ -291,7 +291,9 @@ def fara_emoji(t):
 
 def descarca(url):
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 cadouri-bot"})
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+            "Accept": "image/avif,image/webp,image/png,image/jpeg,*/*;q=0.8"})
         with urllib.request.urlopen(req, timeout=30) as r:
             return Image.open(io.BytesIO(r.read())).convert("RGB")
     except Exception as e:
@@ -416,6 +418,14 @@ def pas_deseneaza():
     for vechi in SITE_DIR.glob("*.jpg"):
         vechi.unlink()
     poze = [descarca(p["imagine"]) for p in data["produse"]]
+    # unele magazine blocheaza serverele GitHub: fara poza, produsul iese din carusel (si din text)
+    pastrate = [(p, poza) for p, poza in zip(data["produse"], poze) if poza]
+    if len(pastrate) < len(data["produse"]):
+        print(f"Fara poza: {len(data['produse']) - len(pastrate)} produse scoase din carusel.")
+        data["produse"] = [p for p, _ in pastrate]
+        poze = [poza for _, poza in pastrate]
+        tema = dict(data["tema"])
+        data["text"] = text_tiktok(tema, data["parte"], data["produse"])
     total = len(data["produse"]) + 2
     slides = [slide_coperta(data, poze)]
     slides += [slide_produs(data, p, poza, i, total) for i, (p, poza) in enumerate(zip(data["produse"], poze), 1)]
