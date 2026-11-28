@@ -81,6 +81,7 @@ def bara_sus(img, r1, r2):
     d.rounded_rectangle([x, 120, x + lw, 300], 44, fill=(11, 8, 6, 215), outline=AURIU_DESCHIS + (230,), width=3)
     d.text((W // 2, 172), r1, font=f, fill=CREM, anchor="mm")
     d.text((W // 2, 248), r2, font=f, fill=AURIU_DESCHIS, anchor="mm")
+    d.text((W // 2, 334), "#publicitate · conține linkuri de afiliere", font=sans(30, 500), fill=CREM + (200,), anchor="mm")
 
 
 def ecran_carlig(baza, banner, titlu1, titlu2, subtitlu):
@@ -313,10 +314,11 @@ def lista_text(trei):
 
 
 def texte(indemn, corp):
-    fb = (f"{indemn}\n\n{corp}\n\nVrei linkurile? Scrie CADOU în comentarii și ți le trimit pe Messenger 📩\n"
+    from facebook_post import MARCAJ
+    fb = (f"{indemn}\n{MARCAJ}\n\n{corp}\n\nVrei linkurile? Scrie CADOU în comentarii și ți le trimit pe Messenger 📩\n"
           f"Toate cele 10 idei de azi sunt și pe site-ul din profilul paginii.\n\n"
           f"#cadouripebuget #ideicadouri #cadouri #cadouridecraciun #afiliere")
-    ig = (f"{indemn}\n\n{corp}\n\n🔗 Link în bio → toate cele 10 idei de azi, cu link direct la magazin.\n"
+    ig = (f"{indemn}\n{MARCAJ}\n\n{corp}\n\n🔗 Link în bio → toate cele 10 idei de azi, cu link direct la magazin.\n"
           f"Salvează Reel-ul ca să-l ai la îndemână 📌\n\n"
           f"#cadouripebuget #ideicadouri #cadouri #cadouridecraciun #cadou #romania #afiliere")
     return fb, ig

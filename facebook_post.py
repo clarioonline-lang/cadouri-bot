@@ -106,8 +106,12 @@ def tema_sezon(azi):
     return None
 
 
+# Marcaj de publicitate cerut de ANPC: vizibil, la inceputul textului (nu doar #afiliere la final)
+MARCAJ = "📢 #publicitate · conține linkuri de afiliere"
+
+
 def postare_produs(p, intro):
-    return (f"{intro}\n\n"
+    return (f"{intro}\n{MARCAJ}\n\n"
             f"🎁 {p['nume']}\n"
             f"{oferta(p)}\n\n"
             f"Vrei link-ul? Scrie {CUVANT_CHEIE} în comentarii și ți-l trimit pe Messenger 📩\n\n"
@@ -125,7 +129,7 @@ def text_instagram(produse, intro):
         corp = f"🎁 {p['nume']}\n{oferta(p)}"
     else:
         corp = "\n".join(f"{i}. {p['nume']} – {p['pret']} lei" for i, p in enumerate(produse, 1))
-    return (f"{intro}\n\n{corp}\n\n"
+    return (f"{intro}\n{MARCAJ}\n\n{corp}\n\n"
             f"🔗 Link în bio → „Ideile de azi”: găsești acolo produsul, cu link direct la magazin.\n"
             f"Salvează postarea ca s-o ai la îndemână 📌\n\n{HASHTAG_IG}")
 
@@ -167,7 +171,7 @@ def main():
 
     if zi == 6 and not sezon:
         top = ordonate[:5]
-        text = ("🏆 Top 5 idei de cadouri sub 100 lei din săptămâna asta:\n\n"
+        text = (f"🏆 Top 5 idei de cadouri sub 100 lei din săptămâna asta:\n{MARCAJ}\n\n"
                 + "\n".join(f"{i}. {p['nume']} – {p['pret']} lei" for i, p in enumerate(top, 1))
                 + f"\n\nCare îți place? Scrie numărul + {CUVANT_CHEIE} în comentarii și îți trimit"
                   " link-ul pe Messenger 📩\n\n#cadouripebuget #ideicadouri #top5 #afiliere")

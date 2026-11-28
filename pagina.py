@@ -298,7 +298,7 @@ def main():
       <p>O idee nouă în fiecare zi și pe <a href="{FACEBOOK}" target="_blank" rel="noopener" style="color:#dba666">pagina noastră de Facebook</a>. Linkurile sunt de afiliere: dacă cumperi,
       primim un mic comision, fără niciun cost în plus pentru tine. Prețurile și stocul se pot schimba în timpul zilei,
       verifică pe site-ul magazinului.</p>
-      <p class="mic-jos">© {azi.year} Lazar Eugen Grigore · <a href="mailto:cadouripebuget@gmail.com" style="color:#dba666">cadouripebuget@gmail.com</a></p>
+      <p class="mic-jos">© {azi.year} Lazar Eugen Grigore, Sibiu · <a href="mailto:cadouripebuget@gmail.com" style="color:#dba666">cadouripebuget@gmail.com</a></p>
     </div>
     <nav>
       <a href="informatii-legale.html">Informații legale</a>
@@ -309,6 +309,7 @@ def main():
     </nav>
   </div>
 </footer>
+<script src="cookie.js" defer></script>
 </body>
 </html>
 """
