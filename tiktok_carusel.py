@@ -110,7 +110,7 @@ def nume_scurt(nume):
     return n[:1].upper() + n[1:] if n else nume[:60]
 
 
-def alege(produse, tema, istoric, norm, scor, exclude):
+def alege(produse, tema, istoric, norm, scor, exclude, n=NR_PRODUSE):
     azi = date.today()
     folosite = {k for k, d in istoric.get("folosite", {}).items()
                 if (azi - date.fromisoformat(d)).days <= ZILE_FARA_REPETARE}
@@ -157,7 +157,7 @@ def alege(produse, tema, istoric, norm, scor, exclude):
         ales.append(p)
         pe_magazin[p["magazin"]] = pe_magazin.get(p["magazin"], 0) + 1
         nume_vazute.add(cheie_nume)
-        if len(ales) == NR_PRODUSE:
+        if len(ales) == n:
             break
     return sorted(ales, key=lambda p: p["pret"])   # de la ieftin la scump: te tine pana la final
 
@@ -187,7 +187,11 @@ def pas_alege():
     tema = tema_zilei(azi)
     istoric = json.loads(ISTORIC.read_text(encoding="utf-8")) if ISTORIC.exists() else {}
     random.seed(azi.toordinal())
-    ales = alege(produse, tema, istoric, ic.norm, ic.scor, ic.EXCLUDE)
+    # luam cativa in plus si pastram doar produsele a caror poza se poate descarca
+    # (unele magazine, ex. Hotpick, blocheaza serverele GitHub)
+    rezerva = alege(produse, tema, istoric, ic.norm, ic.scor, ic.EXCLUDE, n=NR_PRODUSE + 8)
+    ales = [p for p in rezerva if descarca(p["imagine"])][:NR_PRODUSE]
+    ales = sorted(ales, key=lambda p: p["pret"])
     if len(ales) < 5:
         print(f"Prea putine produse pentru tema {tema['cheie']}: {len(ales)}. Nu fac caruselul azi.")
         return
