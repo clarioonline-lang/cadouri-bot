@@ -1,0 +1,24 @@
+@font-face { font-family:"Playfair Display"; src:url("fonturi/playfair.woff2") format("woff2"); font-weight:400 900; font-display:swap; }
+@font-face { font-family:"Inter"; src:url("fonturi/inter.woff2") format("woff2"); font-weight:100 900; font-display:swap; }
+* { box-sizing:border-box; }
+body { margin:0; background:#f7f1e8; color:#2a1a14; font-family:Inter, system-ui, sans-serif; line-height:1.7; }
+a { color:#611c15; }
+.zona { max-width:820px; margin:0 auto; padding-left:28px; padding-right:28px; }
+header { border-bottom:1px solid #e4d6c1; }
+header .zona { max-width:1180px; padding-top:20px; padding-bottom:20px; display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; justify-content:space-between; }
+.logo { font-family:"Playfair Display", Georgia, serif; font-size:24px; font-weight:700; color:#2a1a14; text-decoration:none; }
+.logo i { font-weight:400; color:#611c15; }
+.inapoi { font-size:14px; font-weight:600; text-decoration:none; }
+.text { padding-top:48px; padding-bottom:72px; }
+.supra { margin:0 0 10px; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:#8a6a2f; font-weight:600; }
+h1 { margin:0 0 24px; font-family:"Playfair Display", Georgia, serif; font-size:clamp(32px, 5vw, 44px); line-height:1.15; font-weight:600; }
+h2 { margin:40px 0 10px; font-family:"Playfair Display", Georgia, serif; font-size:26px; font-weight:600; }
+h3 { margin:24px 0 6px; font-size:17px; }
+p, li { font-size:16px; color:#3d2a20; }
+ul { padding-left:22px; }
+ul.date { list-style:none; padding:20px 24px; background:#fffdf9; border:1px solid #e9dcc8; border-radius:14px; }
+ul.date li { padding:4px 0; }
+ul.date span { display:inline-block; min-width:110px; font-size:13px; letter-spacing:1px; text-transform:uppercase; color:#8a6a2f; font-weight:600; }
+footer { background:#2a1a14; color:#d9c8b4; font-size:13px; }
+footer .zona { max-width:1180px; padding-top:28px; padding-bottom:28px; }
+footer a { color:#dba666; }
