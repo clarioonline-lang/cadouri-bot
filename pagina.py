@@ -208,6 +208,12 @@ def main():
   .sume a:hover {{ border-color:var(--visiniu); }}
   .sume b {{ color:var(--visiniu); }}
 
+  .ghiduri-acasa {{ padding-top:10px; padding-bottom:30px; }}
+  .ghid-banda {{ display:block; background:var(--visiniu); color:var(--crem); border-radius:22px; padding:30px 34px; text-decoration:none; }}
+  .ghid-banda .supra {{ color:var(--auriu-cald); }}
+  .ghid-banda-titlu {{ display:block; font-family:var(--serif); font-size:clamp(26px,3.5vw,36px); line-height:1.2; margin-bottom:8px; }}
+  .ghid-banda-text {{ display:block; color:#e9d6c2; font-size:16px; }}
+  .ghid-banda:hover {{ background:var(--visiniu-inchis); }}
   .emag {{ padding-top:20px; padding-bottom:40px; }}
   .emag-grila {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }}
   .emag-grila a {{ display:flex; justify-content:space-between; align-items:center; background:var(--hartie); border:1px solid var(--linie2);
@@ -255,6 +261,7 @@ def main():
       <a href="#idei">Ideile de azi</a>
       <a href="#bugete">Pe bugete</a>
       <a href="#emag">eMAG</a>
+      <a href="ghiduri/">Ghiduri</a>
       <a href="#lista">Lista săptămânală</a>
       <a href="#despre">Despre</a>
     </nav>
@@ -302,6 +309,14 @@ def main():
       <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>200</b> lei</a>
     </div>
   </div>
+</section>
+
+<section class="zona ghiduri-acasa">
+  <a class="ghid-banda" href="ghiduri/cadouri-craciun-sub-100-lei-pentru-ea.html">
+    <span class="supra">Ghid nou</span>
+    <span class="ghid-banda-titlu">Cadouri de Crăciun sub 100 lei pentru ea</span>
+    <span class="ghid-banda-text">20 de idei pe tipuri de femei, plus cum afli mărimea inelului fără să te dai de gol →</span>
+  </a>
 </section>
 
 <section id="emag" class="zona emag">
