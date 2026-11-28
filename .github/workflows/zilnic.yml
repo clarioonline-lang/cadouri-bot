@@ -2,7 +2,7 @@ name: Idei de cadouri zilnic
 
 on:
   schedule:
-    - cron: "55 3 * * *"   # 05:55 ora Romaniei iarna (06:55 vara): idei + postare Facebook
+    - cron: "5 3 * * *"    # 05:05 ora Romaniei iarna (06:05 vara); GitHub poate intarzia ~1 ora
   workflow_dispatch:        # buton "Run workflow" pentru rulare manuala
 
 permissions:
