@@ -25,7 +25,16 @@ from facebook_post import citeste_idei
 INTRARE = Path("idei/AZI.md")
 POSTARE = Path("idei/facebook_post.json")
 IESIRE = Path("site/index.html")
-LISTE = "https://cadouripebuget.systeme.io/cadouri"   # listele pe bugete + abonarea (Systeme.io)
+LISTE = "https://cadouripebuget.systeme.io/cadouri"
+# eMAG: linkuri de afiliere Profitshare (generate pe 28 nov. 2026) catre cautari/categorii de cadouri
+EMAG = [
+    ("Pentru ea", "https://l.profitshare.ro/l/17585454"),
+    ("Pentru el", "https://l.profitshare.ro/l/17585458"),
+    ("Pentru copii", "https://l.profitshare.ro/l/17585459"),
+    ("Moș Nicolae", "https://l.profitshare.ro/l/17585460"),
+    ("Secret Santa", "https://l.profitshare.ro/l/17585461"),
+    ("Coșuri cadou", "https://l.profitshare.ro/l/17585462"),
+]   # listele pe bugete + abonarea (Systeme.io)
 
 LUNI = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie",
         "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
@@ -101,6 +110,8 @@ def main():
     azi = date.today()
     data = f"{ZILE[azi.weekday()]}, {azi.day} {LUNI[azi.month - 1]}"
     carduri = "".join(card(p) for p in restul)
+    emag_butoane = "".join(f'\n    <a href="{e(u)}" target="_blank" rel="sponsored noopener"><span>{e(t)}</span><span class="sageata">→</span></a>'
+                           for t, u in EMAG)
 
     pagina = f"""<!DOCTYPE html>
 <html lang="ro">
@@ -197,6 +208,12 @@ def main():
   .sume a:hover {{ border-color:var(--visiniu); }}
   .sume b {{ color:var(--visiniu); }}
 
+  .emag {{ padding-top:20px; padding-bottom:40px; }}
+  .emag-grila {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }}
+  .emag-grila a {{ display:flex; justify-content:space-between; align-items:center; background:var(--hartie); border:1px solid var(--linie2);
+                  border-radius:14px; padding:18px 22px; font-family:var(--serif); font-size:20px; color:var(--text); transition:border-color .2s, transform .2s; }}
+  .emag-grila a:hover {{ border-color:var(--visiniu); transform:translateY(-2px); }}
+  .emag-grila .sageata {{ color:var(--visiniu); font-family:var(--sans); font-weight:600; }}
   .lista {{ max-width:760px; padding-top:40px; padding-bottom:90px; text-align:center; }}
   .lista p.mic {{ margin:14px 0 28px; color:var(--text2); }}
 
@@ -210,6 +227,8 @@ def main():
   a:focus-visible {{ outline:2px solid var(--visiniu); outline-offset:3px; }}
 
   @media (max-width:620px) {{
+    .emag-grila {{ grid-template-columns:1fr 1fr; gap:10px; }}
+    .emag-grila a {{ padding:14px 14px; font-size:16px; }}
     .zona {{ padding-left:16px; padding-right:16px; }}
     header .zona {{ justify-content:center; text-align:center; }}
     nav {{ justify-content:center; }}
@@ -235,6 +254,7 @@ def main():
     <nav>
       <a href="#idei">Ideile de azi</a>
       <a href="#bugete">Pe bugete</a>
+      <a href="#emag">eMAG</a>
       <a href="#lista">Lista săptămânală</a>
       <a href="#despre">Despre</a>
     </nav>
@@ -281,6 +301,15 @@ def main():
       <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>100</b> lei</a>
       <a href="{LISTE}" target="_blank" rel="noopener">Sub <b>200</b> lei</a>
     </div>
+  </div>
+</section>
+
+<section id="emag" class="zona emag">
+  <div class="titlu-sectiune">
+    <h2>Caută direct pe eMAG</h2>
+    <p>Mii de idei de cadouri, cu livrare rapidă</p>
+  </div>
+  <div class="emag-grila">{emag_butoane}
   </div>
 </section>
 
