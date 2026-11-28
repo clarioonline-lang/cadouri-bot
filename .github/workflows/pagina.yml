@@ -35,6 +35,13 @@ jobs:
       - name: Genereaza pagina
         run: python pagina.py
 
+      - name: Genereaza ghidurile (blog) cu preturi la zi + sitemap
+        continue-on-error: true   # daca nu merge, pagina principala tot se publica
+        env:
+          FEED_URL: ${{ secrets.FEED_URL }}
+          FEED_URL_2: ${{ secrets.FEED_URL_2 }}
+        run: python ghiduri.py
+
       - name: Pune imaginile postarii pe vitrina (Instagram le ia de acolo)
         continue-on-error: true
         run: |
