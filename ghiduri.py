@@ -48,6 +48,17 @@ def incarca_feeduri():
     return index
 
 
+def _stare_linkuri():
+    """Rezultatul verificarii de dimineata (linkuri.py): ce produse au disparut, preturi la zi."""
+    try:
+        return json.loads(Path("idei/linkuri.json").read_text(encoding="utf-8")).get("rezultate", {})
+    except Exception:
+        return {}
+
+
+STARE_LINKURI = _stare_linkuri()
+
+
 def produs_card(ref, ghid, feed, azi_txt):
     """Intoarce (html, date_pentru_schema) sau (None, None) daca produsul nu mai e disponibil."""
     if "feed" in ref:
@@ -56,6 +67,8 @@ def produs_card(ref, ghid, feed, azi_txt):
             return None, None
         if ghid.get("pret_max") and p["pret"] > ghid["pret_max"]:
             return None, None  # s-a scumpit peste bugetul din titlu
+        if STARE_LINKURI.get(p["link"], {}).get("stare") in ("stricat", "stoc", "inactiv"):
+            return None, None  # pagina produsului a disparut sau nu mai e pe stoc
         nume, magazin = ref.get("nume") or p["nume"], p["magazin"].replace(".ro", "").replace(".com", "")
         pret, pret_vechi, link, poza = p["pret"], (p["pret_vechi"] if p["discount"] >= 5 else None), p["link"], p.get("imagine", "")
         nota = f"Preț actualizat azi, {azi_txt}"
@@ -63,6 +76,16 @@ def produs_card(ref, ghid, feed, azi_txt):
         m = ghid["manual"][ref["manual"]]
         nume, magazin, pret, pret_vechi, link, poza = m["nume"], m["magazin"], m["pret"], m.get("pret_vechi"), m["link"], m["poza"]
         nota = f"Preț verificat pe {m['verificat']}"
+        st = STARE_LINKURI.get(link, {})
+        if st.get("stare") in ("stricat", "stoc", "inactiv"):
+            return None, None  # produs pus de mana care a disparut / nu mai e pe stoc
+        if st.get("stare") == "ok" and st.get("pret") and 0.3 * pret < st["pret"] < 3 * pret:
+            pret = st["pret"]   # pretul citit azi-dimineata de pe pagina magazinului
+            nota = f"Preț verificat azi, {azi_txt}"
+            if pret_vechi and pret_vechi <= pret:
+                pret_vechi = None
+        if ghid.get("pret_max") and pret > ghid["pret_max"]:
+            return None, None
     pret_txt = f"{pret:.0f}" if float(pret).is_integer() or pret >= 100 else f"{pret:.2f}".replace(".", ",")
     reducere = round((1 - pret / pret_vechi) * 100) if pret_vechi and pret_vechi > pret else 0
     insigna = f'<span class="insigna">−{reducere}%</span>' if reducere >= 5 else ""
