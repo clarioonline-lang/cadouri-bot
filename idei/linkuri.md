@@ -4,10 +4,10 @@ Verificate: **76 linkuri** (paginile magazinelor).
 
 | Rețea | Linkuri | Cu probleme |
 |---|---|---|
-| 2Performant | 38 | 0 |
-| Profitshare | 38 | 0 |
+| 2Performant | 42 | 0 |
+| Profitshare | 34 | 0 |
 
-Stări: blocat 14, ok 62
+Stări: blocat 12, eroare 2, feed 4, ok 58
 
 ## ✅ Toate linkurile verificate sunt în regulă
 
@@ -22,4 +22,4 @@ Stări: blocat 14, ok 62
 - Startdecor.ro: 2935
 - Watch24.ro: 13
 
-_Nu s-au putut verifica automat 14 linkuri (3gifts.ro, educlass.ro, emag.ro, watch24.ro blochează roboții). Pentru ele, lunea verific doar că linkul de afiliere e încă activ._
+_Nu s-au putut verifica automat 12 linkuri (3gifts.ro, educlass.ro, emag.ro, mindblower.ro blochează roboții). Pentru ele, lunea verific doar că linkul de afiliere e încă activ._

@@ -3,9 +3,9 @@
 
 ## Produsul ales
 
-**Pachet Cadou pentru Calatorii** · 194 lei · -56% · Mindblower.ro
+**Gheare de urs din otel inoxidabil** · 53 lei · -59% · Mindblower.ro
 
-![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/pachet-cadou-pentru-calatorii-134798.jpg)
+![poza](https://op.gomagcdn.ro/domains/mindblower.ro/files/product/original/gheare-de-urs-din-otel-inoxidabil-054483.png)
 
 Salvează poza: apasă lung pe ea → Salvează.
 
@@ -15,8 +15,8 @@ Salvează poza: apasă lung pe ea → Salvează.
 Tema zilei: Pentru copii 👇
 📢 #publicitate · conține linkuri de afiliere
 
-🎁 Pachet Cadou pentru Calatorii
-💸 194 lei în loc de ~441 lei (-56%)
+🎁 Gheare de urs din otel inoxidabil
+💸 53 lei în loc de ~129 lei (-59%)
 
 Vrei link-ul? Scrie CADOU în comentarii și ți-l trimit pe Messenger 📩
 
@@ -29,16 +29,16 @@ Urmărește pagina pentru o idee nouă în fiecare zi 🔔
 
 ```
 Salut! 🎁 Uite link-ul:
-• Pachet Cadou pentru Calatorii – 194 lei: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fpachet-cadou-pentru-calatorii.html
+• Gheare de urs din otel inoxidabil – 53 lei: https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fgheare-de-urs-pentru-legume-si-carnuri.html
 
 (Link de afiliere: dacă cumperi, primesc un mic comision, fără costuri în plus pentru tine.)
 ```
 
 ## Rezervă (dacă primul nu-ți place)
 
-**Cana cu amestecare automata Lenes** · 54 lei · -50%
+**Lampa Glob de Cristal cu Inima cadou romantic** · 34 lei · -50%
 
-🔗 https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Fcana-magica-mix-go.html
+🔗 https://profitshare.ro/lps/c2t/hU0/?redirect=https%3A%2F%2Fmindblower.ro%2Flampa-glob-de-cristal-cu-inima-cadou-romantic.html
 
 ## Postare de interacțiune (opțional, seara, fără produs)
 
@@ -61,8 +61,8 @@ Buget de cadouri anul ăsta: 50, 100 sau 200 lei de persoană? Votează în come
 Tema zilei: Pentru copii 👇
 📢 #publicitate · conține linkuri de afiliere
 
-🎁 Pachet Cadou pentru Calatorii
-💸 194 lei în loc de ~441 lei (-56%)
+🎁 Gheare de urs din otel inoxidabil
+💸 53 lei în loc de ~129 lei (-59%)
 
 🔗 Link în bio → „Ideile de azi”: găsești acolo produsul, cu link direct la magazin.
 Salvează postarea ca s-o ai la îndemână 📌
@@ -81,12 +81,40 @@ Salvează postarea ca s-o ai la îndemână 📌
 Etichetează pe cine trebuie să vadă asta 😉🎁
 📢 #publicitate · conține linkuri de afiliere
 
-1️⃣ Cana cu amestecare automata Lenes – 54 lei (în loc de 108 lei)
-2️⃣ Lampa Glob de Cristal Astronaut – 34 lei (în loc de 68 lei)
-3️⃣ Pachet Cadou pentru Calatorii – 194 lei (în loc de 441 lei)
+1️⃣ Cana Creativa Rosie HotBlocks – 54 lei (în loc de 108 lei)
+2️⃣ Lampa Glob de Cristal cu Inima cadou romantic – 34 lei (în loc de 68 lei)
+3️⃣ Gheare de urs din otel inoxidabil – 53 lei (în loc de 129 lei)
 
 🔗 Link în bio → toate cele 10 idei de azi, cu link direct la magazin.
 Salvează Reel-ul ca să-l ai la îndemână 📌
 
 #cadouripebuget #ideicadouri #cadouri #cadouridecraciun #cadou #romania #afiliere
 ```
+
+
+## TikTok (carusel)
+
+Imaginile (10, în ordine): https://cadouripebuget.online/tiktok/ (după ~06:30; ține apăsat pe fiecare → Salvează)
+
+Text:
+
+```
+Fete, salvați asta 📌 8 cadouri pentru el sub 100 de lei (Partea 1)
+📢 #publicitate · conține linkuri de afiliere
+
+1. Cana SUPER TATA – 48 lei
+2. Set 2 Pahare de Vin Diamond – 48 lei
+3. Cana cu amestecare automata Lenes – 54 lei
+4. Ceas de perete Zaruri – 55 lei
+5. Aparat de masaj electric multifunctional pentru scalp si… – 63 lei
+6. Carti de Joc Placate cu Aur 24K si cutie eleganta din lemn – 78 lei
+7. Masina de tuns barba incarcare USB Camry – 85 lei
+8. Ceas barbatesc Quartz – 90 lei
+
+Pe care l-ai alege? Scrie în comentarii 👇
+Link-urile sunt în bio 🔗 (prețuri de azi, se pot schimba)
+
+#cadouripentruel #ideidecadouri #cadouricraciun #cadouripebuget
+```
+
+La postare: „Afișează mai mult” → „Dezvăluie conținutul postării” → „Marca ta”. Adaugă un sunet popular din TikTok.
