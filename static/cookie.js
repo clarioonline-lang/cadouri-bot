@@ -26,7 +26,7 @@
   b.innerHTML =
     "<p><strong>Cookie-uri:</strong> site-ul nostru nu folosește cookie-uri de statistici sau de publicitate. " +
     "Când dai click pe un produs, magazinul și rețeaua de afiliere pot folosi propriile cookie-uri, pe site-urile lor.</p>" +
-    "<div class='rand'><a href='confidentialitate.html#cookie-uri'>Detalii în Politica de confidențialitate</a>" +
+    "<div class='rand'><a href='/confidentialitate.html#cookie-uri'>Detalii în Politica de confidențialitate</a>" +
     "<button type='button'>Am înțeles</button></div>";
   b.querySelector("button").addEventListener("click", function () {
     try { localStorage.setItem(CHEIE, "1"); } catch (e) {}
