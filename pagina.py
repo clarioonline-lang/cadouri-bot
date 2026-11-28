@@ -15,6 +15,7 @@ ATENTIE: eticheta <meta name='profitshareid'> valideaza site-ul in Profitshare -
 """
 
 import html
+import shutil
 import json
 from datetime import date
 from pathlib import Path
@@ -113,10 +114,11 @@ def main():
 <meta property="og:title" content="Cadouri pe Buget – ideile de azi">
 <meta property="og:description" content="10 cadouri reduse, alese în fiecare dimineață.">
 <meta name="theme-color" content="#f7f1e8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonturi/playfair.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* fonturile sunt gazduite pe site (nu de la Google), ca adresa IP a vizitatorilor sa nu ajunga la terti */
+  @font-face {{ font-family:"Playfair Display"; src:url("fonturi/playfair.woff2") format("woff2"); font-weight:400 900; font-display:swap; }}
+  @font-face {{ font-family:"Inter"; src:url("fonturi/inter.woff2") format("woff2"); font-weight:100 900; font-display:swap; }}
   :root {{
     --crem:#f7f1e8; --hartie:#fffdf9; --nisip:#efe4d3; --linie:#e4d6c1; --linie2:#d9c3a0;
     --visiniu:#611c15; --visiniu-inchis:#3f110c; --auriu:#8a6a2f; --auriu-cald:#dba666;
@@ -203,6 +205,7 @@ def main():
   footer .logo {{ color:#f3e6d4; font-size:22px; display:block; margin-bottom:10px; }}
   footer p {{ margin:0; font-size:14px; line-height:1.7; max-width:460px; }}
   footer nav a {{ color:var(--auriu-cald); }}
+  footer p.mic-jos {{ margin-top:14px; font-size:13px; color:#a8957f; }}
 
   a:focus-visible {{ outline:2px solid var(--visiniu); outline-offset:3px; }}
 
@@ -295,8 +298,11 @@ def main():
       <p>O idee nouă în fiecare zi și pe <a href="{FACEBOOK}" target="_blank" rel="noopener" style="color:#dba666">pagina noastră de Facebook</a>. Linkurile sunt de afiliere: dacă cumperi,
       primim un mic comision, fără niciun cost în plus pentru tine. Prețurile și stocul se pot schimba în timpul zilei,
       verifică pe site-ul magazinului.</p>
+      <p class="mic-jos">© {azi.year} Lazar Eugen Grigore · <a href="mailto:cadouripebuget@gmail.com" style="color:#dba666">cadouripebuget@gmail.com</a></p>
     </div>
     <nav>
+      <a href="informatii-legale.html">Informații legale</a>
+      <a href="confidentialitate.html">Confidențialitate</a>
       <a href="{FACEBOOK}" target="_blank" rel="noopener">Facebook</a>
       <a href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a>
       <a href="{LISTE}" target="_blank" rel="noopener">Liste pe bugete</a>
@@ -308,6 +314,8 @@ def main():
 """
     IESIRE.parent.mkdir(exist_ok=True)
     IESIRE.write_text(pagina, encoding="utf-8")
+    # paginile fixe (informatii legale, confidentialitate) si fonturile locale
+    shutil.copytree(Path(__file__).resolve().parent / "static", IESIRE.parent, dirs_exist_ok=True)
     print(f"Scris: {IESIRE} ({len(produse)} produse)")
 
 
